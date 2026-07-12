@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | NexZeal</title>
+    <meta name="description" content="Get in touch with NexZeal's design architect. Plan layout scopes, website timelines, and budget frameworks.">
+    
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- ==========================================================================
+       1. STICKY HEADER NAVIGATION
+       ========================================================================== -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo" aria-label="NexZeal Home">
+                <span class="logo-symbol">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24" height="24" rx="6" fill="#0EA5E9"/>
+                        <path d="M7 17V7L12 13.5L17 7V17" stroke="#FAFBFA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                NexZeal
+            </a>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                    <span class="theme-toggle-dot"></span>
+                    <span class="theme-toggle-icon sun" aria-hidden="true">
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </span>
+                    <span class="theme-toggle-icon moon" aria-hidden="true">
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </span>
+                </button>
+                
+                <a href="contact.html" class="btn btn-primary">Get Started <i data-lucide="arrow-right"></i></a>
+                
+                <button class="mobile-nav-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       2. CONTACT HERO SECTION
+       ========================================================================== -->
+    <section class="about-hero bg-gradient-section" style="position: relative;">
+        <!-- Blurred background blobs -->
+        <div class="blur-circle-container">
+            <div class="blur-circle blur-circle-primary" style="top: -10%; right: -5%;"></div>
+            <div class="blur-circle blur-circle-secondary" style="bottom: 5%; left: -5%;"></div>
+        </div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="reveal reveal-fade-up">
+                <h1 class="about-hero-title typography-3d">
+                    Let's Create Something <span class="text-gradient">Amazing Together</span>
+                </h1>
+                <p class="section-subtitle" style="max-width: 600px; margin: 0 auto;">
+                    Have a project in mind? Complete the brief below, and we will coordinate layout ideas and outline estimates.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       3. CONTACT SECTION
+       ========================================================================== -->
+    <section class="section-padding bg-tinted-section" style="border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); position: relative;">
+        <!-- Blurred background blobs -->
+        <div class="blur-circle-container">
+            <div class="blur-circle blur-circle-primary" style="top: 20%; left: -10%;"></div>
+            <div class="blur-circle blur-circle-secondary" style="bottom: 20%; right: -5%;"></div>
+        </div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="contact-grid">
+                
+                <!-- Contact Form Box -->
+                <div class="contact-form-box reveal reveal-slide-left">
+                    <h3 class="form-title">Start Your Project Brief</h3>
+                    <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Brief submitted! We will coordinate scopes via email within 24 hours.'); this.reset();">
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" id="name" name="name" class="form-control" placeholder="e.g. John Doe" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="e.g. john@company.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="company" class="form-label">Company Name</label>
+                                <input type="text" id="company" name="company" class="form-control" placeholder="e.g. Acme Corp">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="service" class="form-label">Service Required</label>
+                                <select id="service" name="service" class="form-control" required>
+                                    <option value="" disabled selected>Select a Service</option>
+                                    <option value="web-design">Website Design & Development</option>
+                                    <option value="ui-ux">UI/UX Layout Prototypes</option>
+                                    <option value="wordpress">WordPress & Elementor Dev</option>
+                                    <option value="optimization">Website Maintenance & Speed</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="details" class="form-label">Project Details</label>
+                            <textarea id="details" name="details" class="form-control" rows="5" placeholder="Detail target parameters, visual style rules, pages needed, and deadlines..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">
+                            Submit Project Brief
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Info Panel -->
+                <div class="contact-info-panel reveal reveal-slide-right">
+                    
+                    <!-- Direct Email -->
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Direct Coordinates</h4>
+                            <p><a href="mailto:hello@nexzeal.com">hello@nexzeal.com</a></p>
+                            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.25rem;">Typically responds within 24 hours.</p>
+                        </div>
+                    </div>
+ 
+                    <!-- Social Profiles -->
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i data-lucide="linkedin"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>LinkedIn Network</h4>
+                            <p><a href="https://linkedin.com" target="_blank">linkedin.com/company/nexzeal</a></p>
+                        </div>
+                    </div>
+ 
+                    <!-- Company Detail -->
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i data-lucide="building-2"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>NexZeal Technologies LLC</h4>
+                            <p>Handcrafting digital interfaces since 2020.</p>
+                            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.25rem;">Reg No: #8928371-C</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       4. FOOTER
+       ========================================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-symbol">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" rx="6" fill="#0EA5E9"/>
+                                <path d="M7 17V7L12 13.5L17 7V17" stroke="#FAFBFA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        NexZeal
+                    </a>
+                    <p>Handcrafting fast websites, robust backend systems, and clean UI/UX mockups for clients worldwide.</p>
+                    <div class="footer-socials">
+                        <a href="https://linkedin.com" class="footer-social-link" aria-label="LinkedIn" target="_blank">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="https://github.com" class="footer-social-link" aria-label="GitHub" target="_blank">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="https://twitter.com" class="footer-social-link" aria-label="Twitter" target="_blank">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="portfolio.html">Our Portfolio</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="mailto:hello@nexzeal.com">hello@nexzeal.com</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4><i data-lucide="layers" style="width: 14px; height: 14px; margin-right: 6px; color: var(--color-primary);"></i> Services</h4>
+                    <ul>
+                        <li><a href="services.html"><i data-lucide="chevron-right" style="width: 10px; height: 10px; margin-right: 4px; color: var(--color-primary);"></i> Web Development</a></li>
+                        <li><a href="services.html"><i data-lucide="chevron-right" style="width: 10px; height: 10px; margin-right: 4px; color: var(--color-primary);"></i> UI/UX Design</a></li>
+                        <li><a href="services.html"><i data-lucide="chevron-right" style="width: 10px; height: 10px; margin-right: 4px; color: var(--color-primary);"></i> WordPress Dev</a></li>
+                        <li><a href="services.html"><i data-lucide="chevron-right" style="width: 10px; height: 10px; margin-right: 4px; color: var(--color-primary);"></i> SEO Optimization</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4><i data-lucide="chevron-right" style="width: 14px; height: 14px; margin-right: 6px; color: var(--color-primary);"></i> Quick Links</h4>
+                    <ul>
+                        <li><a href="#"><i data-lucide="chevron-right" style="width: 10px; height: 10px; margin-right: 4px; color: var(--color-primary);"></i> Privacy Policy</a></li>
+                        <li><a href="#"><i data-lucide="chevron-right" style="width: 10px; height: 10px; margin-right: 4px; color: var(--color-primary);"></i> Terms of Service</a></li>
+                        <li><a href="contact.html"><i data-lucide="chevron-right" style="width: 10px; height: 10px; margin-right: 4px; color: var(--color-primary);"></i> Book Consultation</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 NexZeal Technologies. All rights reserved. Craftsmanship in digital engineering.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Script Logic -->
+    <script src="js/main.js"></script>
+</body>
+</html>

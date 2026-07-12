@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexZeal | Premium Digital Agency & Web Design Solutions</title>
+    <meta name="description" content="NexZeal creates modern, high-performance websites and digital solutions that help startups and businesses establish a powerful online presence.">
+    
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- ==========================================================================
+       1. STICKY HEADER NAVIGATION
+       ========================================================================== -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo" aria-label="NexZeal Home">
+                <span class="logo-symbol">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24" height="24" rx="6" fill="#0EA5E9"/>
+                        <path d="M7 17V7L12 13.5L17 7V17" stroke="#FAFBFA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                NexZeal
+            </a>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <!-- Beautiful Animated Theme Toggle -->
+                <button class="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                    <span class="theme-toggle-dot"></span>
+                    <span class="theme-toggle-icon sun" aria-hidden="true">
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </span>
+                    <span class="theme-toggle-icon moon" aria-hidden="true">
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </span>
+                </button>
+                
+                <a href="contact.html" class="btn btn-primary">Get Started <i data-lucide="arrow-right"></i></a>
+                
+                <button class="mobile-nav-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <section class="hero bg-gradient-section" style="position: relative;">
+        <!-- Blurred background blobs -->
+        <div class="blur-circle-container">
+            <div class="blur-circle blur-circle-primary" style="top: -10%; right: -5%;"></div>
+            <div class="blur-circle blur-circle-secondary" style="bottom: 5%; left: -5%;"></div>
+        </div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="hero-grid">
+                <div class="hero-content reveal reveal-slide-left">
+                    <h1 class="hero-title typography-3d">
+                        Building <span class="text-gradient">Digital Experiences</span> That Grow Your Business
+                    </h1>
+                    <p class="hero-desc">
+                        NexZeal creates modern, high-performance websites and digital solutions that help startups and businesses establish a powerful online presence.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="contact.html" class="btn btn-primary">
+                            Start Your Project
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                        <a href="portfolio.html" class="btn btn-secondary">View Our Work <i data-lucide="external-link"></i></a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual reveal reveal-slide-right">
+                    <!-- Layered 3D Browser Mockup -->
+                    <div class="browser-mockup">
+                        <div class="browser-header">
+                            <div class="browser-dots">
+                                <div class="browser-dot"></div>
+                                <div class="browser-dot"></div>
+                                <div class="browser-dot"></div>
+                            </div>
+                            <div class="browser-url">nexzeal.com/workspace</div>
+                        </div>
+                        <div class="browser-screen">
+                            <img src="assets/hero_mockup.png" alt="NexZeal Workspace Setup" width="560" height="420">
+                        </div>
+                    </div>
+                    
+                    <!-- Floating UI Widgets -->
+                    <div class="floating-element floating-1">
+                        <div class="floating-icon">
+                            <i data-lucide="check-circle"></i>
+                        </div>
+                        <div class="floating-text">
+                            <h5>Design Complete</h5>
+                            <p>Ready for review</p>
+                        </div>
+                    </div>
+                    
+                    <div class="floating-element floating-2">
+                        <div class="floating-icon icon-pulse-subtle">
+                            <i data-lucide="trending-up"></i>
+                        </div>
+                        <div class="floating-text">
+                            <h5>+45% Conversion</h5>
+                            <p>Optimized user flows</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       3. TRUST SECTION
+       ========================================================================== -->
+    <section class="section-padding bg-white-section" style="border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); position: relative;">
+        <div class="container">
+            <div class="section-header reveal reveal-fade-up">
+                <h2 class="section-title">Designed for Excellence</h2>
+                <p class="section-subtitle">How we build trust, authority, and premium aesthetics for all client projects.</p>
+            </div>
+            
+            <div class="trust-grid">
+                <!-- Card 1 -->
+                <div class="trust-card card-base reveal reveal-fade-up delay-100">
+                    <div class="card-icon icon-pulse-subtle">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+                    <h3 class="card-title">Modern Design</h3>
+                    <p class="card-desc">Handcrafted layouts built with clean hierarchy, bespoke spacing, and strict style rules.</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="trust-card card-base reveal reveal-fade-up delay-200">
+                    <div class="card-icon icon-pulse-subtle">
+                        <i data-lucide="zap"></i>
+                    </div>
+                    <h3 class="card-title">Fast Performance</h3>
+                    <p class="card-desc">Lightweight codes structured for sub-second load times and high scores in site health audits.</p>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="trust-card card-base reveal reveal-fade-up delay-300">
+                    <div class="card-icon">
+                        <i data-lucide="smartphone"></i>
+                    </div>
+                    <h3 class="card-title">Responsive Experience</h3>
+                    <p class="card-desc">Consistent grid rendering on desktop screens, tables, and handheld mobile viewports.</p>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="trust-card card-base reveal reveal-fade-up delay-400">
+                    <div class="card-icon">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3 class="card-title">Client-Focused</h3>
+                    <p class="card-desc">Collaborating directly with key creators to ensure design parameters align with targeted goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       4. SERVICES PREVIEW
+       ========================================================================== -->
+    <section class="section-padding bg-tinted-section" style="position: relative;">
+        <!-- Blurred background blobs -->
+        <div class="blur-circle-container">
+            <div class="blur-circle blur-circle-primary" style="top: 20%; left: -10%;"></div>
+            <div class="blur-circle blur-circle-secondary" style="bottom: 10%; right: -5%;"></div>
+        </div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="section-header reveal reveal-fade-up">
+                <h2 class="section-title">Core Offerings</h2>
+                <p class="section-subtitle">Premium web solutions configured to scale systems and build conversion streams.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card card-base reveal reveal-fade-up delay-100">
+                    <div class="service-icon">
+                        <i data-lucide="layout-dashboard"></i>
+                    </div>
+                    <h3 class="card-title">Website Design & Development</h3>
+                    <p class="card-desc">Bespoke high-performance websites built with modern frameworks and pixel-perfect layouts.</p>
+                    <a href="services.html" class="service-link">
+                        Learn More
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card card-base reveal reveal-fade-up delay-200">
+                    <div class="service-icon">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <h3 class="card-title">UI/UX Design</h3>
+                    <p class="card-desc">Interactive wireframes, functional flowcharts, and interfaces structured around ease of use.</p>
+                    <a href="services.html" class="service-link">
+                        Learn More
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card card-base reveal reveal-fade-up delay-300">
+                    <div class="service-icon">
+                        <i data-lucide="layers"></i>
+                    </div>
+                    <h3 class="card-title">WordPress & Elementor</h3>
+                    <p class="card-desc">Fully customizable layouts that clients can update, add content to, and edit independently.</p>
+                    <a href="services.html" class="service-link">
+                        Learn More
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card card-base reveal reveal-fade-up delay-400">
+                    <div class="service-icon">
+                        <i data-lucide="gauge"></i>
+                    </div>
+                    <h3 class="card-title">Website Optimization</h3>
+                    <p class="card-desc">Compressing payloads, managing meta tags, and configuring scripts to lift SEO ranks.</p>
+                    <a href="services.html" class="service-link">
+                        Learn More
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       5. WHY CHOOSE US
+       ========================================================================== -->
+    <section class="section-padding bg-white-section" style="border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); position: relative;">
+        <div class="container">
+            <div class="section-header reveal reveal-fade-up">
+                <h2 class="section-title">Why Choose NexZeal</h2>
+                <p class="section-subtitle">We build for long-term growth, combining solid architecture with functional design.</p>
+            </div>
+            
+            <div class="why-grid">
+                <!-- Card 1 -->
+                <div class="why-card card-base reveal reveal-fade-up delay-100">
+                    <div class="why-icon icon-pulse-subtle">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+                    <h3 class="card-title">Modern Design</h3>
+                    <p class="card-desc">Bespoke layout grids built strictly around typography hierarchy and structural simplicity.</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="why-card card-base reveal reveal-fade-up delay-200">
+                    <div class="why-icon">
+                        <i data-lucide="briefcase"></i>
+                    </div>
+                    <h3 class="card-title">Business Focused</h3>
+                    <p class="card-desc">We align digital setups with measurable goals, helping convert site visits into sales inquiries.</p>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="why-card card-base reveal reveal-fade-up delay-300">
+                    <div class="why-icon icon-pulse-subtle">
+                        <i data-lucide="zap"></i>
+                    </div>
+                    <h3 class="card-title">Performance First</h3>
+                    <p class="card-desc">Clean engineering ensures fast loading, keeping bounce rates low and customer retention high.</p>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="why-card card-base reveal reveal-fade-up delay-400">
+                    <div class="why-icon">
+                        <i data-lucide="headset"></i>
+                    </div>
+                    <h3 class="card-title">Reliable Support</h3>
+                    <p class="card-desc">Continuous feedback loops, active updates, and database backup schedules long after launch.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       6. FEATURED PORTFOLIO
+       ========================================================================== -->
+    <section class="section-padding bg-gradient-section" style="position: relative;">
+        <!-- Blurred background blobs -->
+        <div class="blur-circle-container">
+            <div class="blur-circle blur-circle-primary" style="top: 10%; right: -10%;"></div>
+            <div class="blur-circle blur-circle-secondary" style="bottom: 20%; left: -5%;"></div>
+        </div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="section-header reveal reveal-fade-up">
+                <h2 class="section-title">Selected Case Studies</h2>
+                <p class="section-subtitle">Take a look at premium mockups of modern layouts we designed and built.</p>
+            </div>
+            
+            <div class="work-grid">
+                <!-- Case 1 -->
+                <div class="work-card card-base reveal reveal-fade-up delay-100" onclick="location.href='portfolio.html'">
+                    <div class="work-img-wrap">
+                        <img src="assets/project_1.png" alt="SaaS Analytics Platform" width="360" height="270">
+                    </div>
+                    <div class="work-info">
+                        <div class="work-category">Software Engineering</div>
+                        <h3 class="work-title">SaaS Analytics Platform</h3>
+                        <p class="work-desc">Metric interfaces plotting server data, user charts, and database logs.</p>
+                        <div class="work-techs">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">ChartJS</span>
+                        </div>
+                        <a href="portfolio.html" class="work-link">
+                            View Project
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Case 2 -->
+                <div class="work-card card-base reveal reveal-fade-up delay-200" onclick="location.href='portfolio.html'">
+                    <div class="work-img-wrap">
+                        <img src="assets/project_2.png" alt="Arc Portfolio Studio" width="360" height="270">
+                    </div>
+                    <div class="work-info">
+                        <div class="work-category">Web Development</div>
+                        <h3 class="work-title">Arc Portfolio Studio</h3>
+                        <p class="work-desc">High-end architecture layouts designed around spacious grids and masonry lists.</p>
+                        <div class="work-techs">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">GLSL</span>
+                        </div>
+                        <a href="portfolio.html" class="work-link">
+                            View Project
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Case 3 -->
+                <div class="work-card card-base reveal reveal-fade-up delay-300" onclick="location.href='portfolio.html'">
+                    <div class="work-img-wrap">
+                        <img src="assets/project_3.png" alt="Flow Schedule Suite" width="360" height="270">
+                    </div>
+                    <div class="work-info">
+                        <div class="work-category">UI/UX Design</div>
+                        <h3 class="work-title">Flow Schedule Suite</h3>
+                        <p class="work-desc">Modern calendar dashboards making user meeting queues simple and organized.</p>
+                        <div class="work-techs">
+                            <span class="tech-tag">Figma</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Tailwind</span>
+                        </div>
+                        <a href="portfolio.html" class="work-link">
+                            View Project
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="portfolio-cta reveal reveal-fade-up">
+                <a href="portfolio.html" class="btn btn-secondary">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       7. OUR PROCESS TIMELINE
+       ========================================================================== -->
+    <section class="section-padding bg-tinted-section" style="border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); position: relative;">
+        <div class="container">
+            <div class="section-header reveal reveal-fade-up">
+                <h2 class="section-title">Our Process</h2>
+                <p class="section-subtitle">How we transition ideas into robust digital platforms in four steps.</p>
+            </div>
+            
+            <div class="process-grid">
+                <!-- Card 1 -->
+                <div class="process-card card-base reveal reveal-fade-up delay-100">
+                    <div class="process-icon"><i data-lucide="search"></i></div>
+                    <div class="process-number">01</div>
+                    <h3 class="card-title">Discover</h3>
+                    <p class="card-desc">Defining metrics, planning system maps, and writing brief scopes to align target parameters.</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="process-card card-base reveal reveal-fade-up delay-200">
+                    <div class="process-icon icon-wiggle-hover"><i data-lucide="compass"></i></div>
+                    <div class="process-number">02</div>
+                    <h3 class="card-title">Design</h3>
+                    <p class="card-desc">Drafting wireframes, vector styles, typography layouts, and interactive mockup previews.</p>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="process-card card-base reveal reveal-fade-up delay-300">
+                    <div class="process-icon"><i data-lucide="code"></i></div>
+                    <div class="process-number">03</div>
+                    <h3 class="card-title">Develop</h3>
+                    <p class="card-desc">Writing modular, light code structures and database hooks optimized for quick response speeds.</p>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="process-card card-base reveal reveal-fade-up delay-400">
+                    <div class="process-icon icon-slide-up-hover"><i data-lucide="rocket"></i></div>
+                    <div class="process-number">04</div>
+                    <h3 class="card-title">Launch</h3>
+                    <p class="card-desc">Final script audits, server deployment checklists, and analytics configurations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       8. CTA SECTION
+       ========================================================================== -->
+    <section class="section-padding cta-section bg-gradient-section" style="position: relative; overflow: hidden;">
+        <!-- Blurred background blobs -->
+        <div class="blur-circle-container">
+            <div class="blur-circle blur-circle-primary" style="top: -20%; right: -10%;"></div>
+            <div class="blur-circle blur-circle-secondary" style="bottom: -20%; left: -10%;"></div>
+        </div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="cta-box reveal reveal-fade-up">
+                <h2 class="cta-title">Ready to Build Your Next Digital Experience?</h2>
+                <p class="cta-desc">Get in touch to review project goals. We will outline target architectures and construct a clean roadmap forward.</p>
+                <a href="contact.html" class="btn btn-primary">
+                    Let's Work Together
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       9. FOOTER
+       ========================================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-symbol">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" rx="6" fill="#0EA5E9"/>
+                                <path d="M7 17V7L12 13.5L17 7V17" stroke="#FAFBFA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        NexZeal
+                    </a>
+                    <p>Handcrafting fast websites, robust backend systems, and clean UI/UX mockups for clients worldwide.</p>
+                    <div class="footer-socials">
+                        <a href="https://linkedin.com" class="footer-social-link" aria-label="LinkedIn" target="_blank">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="https://github.com" class="footer-social-link" aria-label="GitHub" target="_blank">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="https://twitter.com" class="footer-social-link" aria-label="Twitter" target="_blank">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="portfolio.html">Our Portfolio</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="mailto:hello@nexzeal.com">hello@nexzeal.com</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4><i data-lucide="layers" style="width: 14px; height: 14px; margin-right: 6px; color: var(--color-primary);"></i> Services</h4>
+                    <ul>
+                        <li><a href="services.html"><i data-lucide="chevron-right" style="width: 10px; height: 10px; margin-right: 4px; color: var(--color-primary);"></i> Web Development</a></li>
+                        <li><a href="services.html"><i data-lucide="chevron-right" style="width: 10px; height: 10px; margin-right: 4px; color: var(--color-primary);"></i> UI/UX Design</a></li>
+                        <li><a href="services.html"><i data-lucide="chevron-right" style="width: 10px; height: 10px; margin-right: 4px; color: var(--color-primary);"></i> WordPress Dev</a></li>
+                        <li><a href="services.html"><i data-lucide="chevron-right" style="width: 10px; height: 10px; margin-right: 4px; color: var(--color-primary);"></i> SEO Optimization</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4><i data-lucide="chevron-right" style="width: 14px; height: 14px; margin-right: 6px; color: var(--color-primary);"></i> Quick Links</h4>
+                    <ul>
+                        <li><a href="#"><i data-lucide="chevron-right" style="width: 10px; height: 10px; margin-right: 4px; color: var(--color-primary);"></i> Privacy Policy</a></li>
+                        <li><a href="#"><i data-lucide="chevron-right" style="width: 10px; height: 10px; margin-right: 4px; color: var(--color-primary);"></i> Terms of Service</a></li>
+                        <li><a href="contact.html"><i data-lucide="chevron-right" style="width: 10px; height: 10px; margin-right: 4px; color: var(--color-primary);"></i> Book Consultation</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 NexZeal Technologies. All rights reserved. Craftsmanship in digital engineering.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Script Logic -->
+    <script src="js/main.js"></script>
+</body>
+</html>

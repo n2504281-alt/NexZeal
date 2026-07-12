@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | NexZeal</title>
+    <meta name="description" content="NexZeal is a premium web development and design partner, building high-converting digital interfaces and bespoke systems.">
+    
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- ==========================================================================
+       1. STICKY HEADER NAVIGATION
+       ========================================================================== -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo" aria-label="NexZeal Home">
+                <span class="logo-symbol">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24" height="24" rx="6" fill="#0EA5E9"/>
+                        <path d="M7 17V7L12 13.5L17 7V17" stroke="#FAFBFA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                NexZeal
+            </a>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                    <span class="theme-toggle-dot"></span>
+                    <span class="theme-toggle-icon sun" aria-hidden="true">
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </span>
+                    <span class="theme-toggle-icon moon" aria-hidden="true">
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </span>
+                </button>
+                
+                <a href="contact.html" class="btn btn-primary">Get Started <i data-lucide="arrow-right"></i></a>
+                
+                <button class="mobile-nav-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       2. ABOUT HERO SECTION
+       ========================================================================== -->
+    <section class="about-hero bg-gradient-section" style="position: relative;">
+        <!-- Blurred background blobs -->
+        <div class="blur-circle-container">
+            <div class="blur-circle blur-circle-primary" style="top: -10%; right: -5%;"></div>
+            <div class="blur-circle blur-circle-secondary" style="bottom: 5%; left: -5%;"></div>
+        </div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="reveal reveal-fade-up">
+                <h1 class="about-hero-title typography-3d">
+                    Creating <span class="text-gradient">Digital Experiences</span> That Matter
+                </h1>
+                <p class="section-subtitle" style="max-width: 600px; margin: 0 auto;">
+                    We are a modern digital agency dedicated to handcrafting performant websites, high-fidelity UI/UX layouts, and structured database systems.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       3. WHO WE ARE
+       ========================================================================== -->
+    <section class="section-padding bg-white-section" style="border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); position: relative;">
+        <div class="container">
+            <div class="about-intro-grid">
+                <div class="about-intro-content reveal reveal-slide-left">
+                    <h2 class="about-intro-title">Who We Are</h2>
+                    <div class="about-intro-text">
+                        <p>
+                            Founded in 2020, NexZeal emerged with a single core mission: to bridge the gap between creative visual artistry and complex technical engineering. Over the past 6 years, we have scaled systems, crafted clean websites, and designed products that make users say "Wow."
+                        </p>
+                        <p>
+                            We reject pre-fabricated AI templates and mass-produced layouts. Everything we code is custom-built around your specific business goals, ensuring fast page speeds, great SEO health, and premium aesthetics.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="about-intro-stats reveal reveal-slide-right">
+                    <!-- Stat 1 -->
+                    <div class="card-base" style="margin-bottom: 1.5rem; padding: 2rem; display: flex; flex-direction: row; align-items: center; gap: 1.5rem; justify-content: flex-start; width: 100%;">
+                        <div class="card-icon" style="margin-bottom: 0; flex-shrink: 0; background-color: var(--bg-primary);">
+                            <i data-lucide="clock"></i>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 2rem; font-weight: 800; color: var(--color-primary);">6+ Years</h3>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">Of Handcrafted Web Experience</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Stat 2 -->
+                    <div class="card-base" style="padding: 2rem; display: flex; flex-direction: row; align-items: center; gap: 1.5rem; justify-content: flex-start; width: 100%;">
+                        <div class="card-icon" style="margin-bottom: 0; flex-shrink: 0; background-color: var(--bg-primary);">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 2rem; font-weight: 800; color: var(--color-primary);">4 Professionals</h3>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">Expert Designers & Developers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       4. MISSION & VISION
+       ========================================================================== -->
+    <section class="section-padding bg-tinted-section" style="position: relative;">
+        <!-- Blurred background blobs -->
+        <div class="blur-circle-container">
+            <div class="blur-circle blur-circle-primary" style="top: 20%; left: -10%;"></div>
+            <div class="blur-circle blur-circle-secondary" style="bottom: 10%; right: -5%;"></div>
+        </div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="about-mission-grid">
+                <!-- Mission -->
+                <div class="card-base reveal reveal-fade-up delay-100">
+                    <div class="card-icon icon-pulse-subtle">
+                        <i data-lucide="target"></i>
+                    </div>
+                    <h3 class="card-title">Our Mission</h3>
+                    <p class="card-desc">
+                        "Helping businesses build powerful digital experiences through innovative design, sub-second latency engineering, and conversion-focused architectures."
+                    </p>
+                </div>
+                
+                <!-- Vision -->
+                <div class="card-base reveal reveal-fade-up delay-200">
+                    <div class="card-icon icon-wiggle-hover">
+                        <i data-lucide="compass"></i>
+                    </div>
+                    <h3 class="card-title">Our Vision</h3>
+                    <p class="card-desc">
+                        "Becoming a trusted digital partner for businesses worldwide, recognized for bringing high-end agency craftsmanship to every client codebase."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       5. VALUES
+       ========================================================================== -->
+    <section class="section-padding bg-white-section" style="border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); position: relative;">
+        <div class="container">
+            <div class="section-header reveal reveal-fade-up">
+                <h2 class="section-title">Our Core Values</h2>
+                <p class="section-subtitle">The beliefs and standards that define how we build products and communicate.</p>
+            </div>
+            
+            <div class="about-values-grid">
+                <!-- Value 1 -->
+                <div class="value-card card-base reveal reveal-fade-up delay-100">
+                    <div class="value-icon icon-pulse-subtle">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+                    <h3 class="card-title">Innovation</h3>
+                    <p class="card-desc">Constantly refactoring code templates, adopting robust frameworks, and integrating sleek visual tricks.</p>
+                </div>
+                
+                <!-- Value 2 -->
+                <div class="value-card card-base reveal reveal-fade-up delay-200">
+                    <div class="value-icon">
+                        <i data-lucide="badge-check"></i>
+                    </div>
+                    <h3 class="card-title">Quality</h3>
+                    <p class="card-desc">Writing clear semantic tags, compiling styling guidelines, and checking loading scores meticulously.</p>
+                </div>
+                
+                <!-- Value 3 -->
+                <div class="value-card card-base reveal reveal-fade-up delay-300">
+                    <div class="value-icon">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <h3 class="card-title">Transparency</h3>
+                    <p class="card-desc">Providing clients with direct access to staging repositories, clear progress reports, and open feedback loops.</p>
+                </div>
+                
+                <!-- Value 4 -->
+                <div class="value-card card-base reveal reveal-fade-up delay-400">
+                    <div class="value-icon icon-pulse-subtle">
+                        <i data-lucide="trending-up"></i>
+                    </div>
+                    <h3 class="card-title">Growth</h3>
+                    <p class="card-desc">Aligning digital assets with user funnels, focusing strictly on high-converting features and actions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       6. STRATEGIC APPROACH
+       ========================================================================== -->
+    <section class="section-padding bg-gradient-section" style="position: relative;">
+        <!-- Blurred background blobs -->
+        <div class="blur-circle-container">
+            <div class="blur-circle blur-circle-primary" style="top: 10%; right: -10%;"></div>
+            <div class="blur-circle blur-circle-secondary" style="bottom: 20%; left: -5%;"></div>
+        </div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="section-header reveal reveal-fade-up">
+                <h2 class="section-title">Strategic Approach</h2>
+                <p class="section-subtitle">How we transition client briefs into pixel-perfect live web experiences.</p>
+            </div>
+            
+            <div class="approach-timeline reveal reveal-fade-up">
+                <!-- Step 1 -->
+                <div class="approach-step">
+                    <div class="approach-icon-wrap">
+                        <i data-lucide="search"></i>
+                    </div>
+                    <h4>1. Research</h4>
+                    <p>Auditing competitors, plotting target user profiles, and indexing performance requirements.</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="approach-step">
+                    <div class="approach-icon-wrap icon-wiggle-hover">
+                        <i data-lucide="compass"></i>
+                    </div>
+                    <h4>2. Strategy</h4>
+                    <p>Detailing site structures, compiling page hierarchies, and validating conversion actions.</p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="approach-step">
+                    <div class="approach-icon-wrap">
+                        <i data-lucide="pen-tool"></i>
+                    </div>
+                    <h4>3. Design</h4>
+                    <p>Drafting layout systems, tuning typographic scales, and compiling vector graphics.</p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="approach-step">
+                    <div class="approach-icon-wrap">
+                        <i data-lucide="code"></i>
+                    </div>
+                    <h4>4. Development</h4>
+                    <p>Compiling modular scripts, coding semantic markup, and conducting speed optimization checks.</p>
+                </div>
+                
+                <!-- Step 5 -->
+                <div class="approach-step">
+                    <div class="approach-icon-wrap">
+                        <i data-lucide="gauge"></i>
+                    </div>
+                    <h4>5. Optimization</h4>
+                    <p>Reviewing viewport rendering, minifying asset files, and checking site analytics triggers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       7. FOOTER
+       ========================================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-symbol">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" rx="6" fill="#0EA5E9"/>
+                                <path d="M7 17V7L12 13.5L17 7V17" stroke="#FAFBFA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        NexZeal
+                    </a>
+                    <p>Handcrafting fast websites, robust backend systems, and clean UI/UX mockups for clients worldwide.</p>
+                    <div class="footer-socials">
+                        <a href="https://linkedin.com" class="footer-social-link" aria-label="LinkedIn" target="_blank">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="https://github.com" class="footer-social-link" aria-label="GitHub" target="_blank">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="https://twitter.com" class="footer-social-link" aria-label="Twitter" target="_blank">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="portfolio.html">Our Portfolio</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="mailto:hello@nexzeal.com">hello@nexzeal.com</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4><i data-lucide="layers" style="width: 14px; height: 14px; margin-right: 6px; color: var(--color-primary);"></i> Services</h4>
+                    <ul>
+                        <li><a href="services.html"><i data-lucide="chevron-right" style="width: 10px; height: 10px; margin-right: 4px; color: var(--color-primary);"></i> Web Development</a></li>
+                        <li><a href="services.html"><i data-lucide="chevron-right" style="width: 10px; height: 10px; margin-right: 4px; color: var(--color-primary);"></i> UI/UX Design</a></li>
+                        <li><a href="services.html"><i data-lucide="chevron-right" style="width: 10px; height: 10px; margin-right: 4px; color: var(--color-primary);"></i> WordPress Dev</a></li>
+                        <li><a href="services.html"><i data-lucide="chevron-right" style="width: 10px; height: 10px; margin-right: 4px; color: var(--color-primary);"></i> SEO Optimization</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4><i data-lucide="chevron-right" style="width: 14px; height: 14px; margin-right: 6px; color: var(--color-primary);"></i> Quick Links</h4>
+                    <ul>
+                        <li><a href="#"><i data-lucide="chevron-right" style="width: 10px; height: 10px; margin-right: 4px; color: var(--color-primary);"></i> Privacy Policy</a></li>
+                        <li><a href="#"><i data-lucide="chevron-right" style="width: 10px; height: 10px; margin-right: 4px; color: var(--color-primary);"></i> Terms of Service</a></li>
+                        <li><a href="contact.html"><i data-lucide="chevron-right" style="width: 10px; height: 10px; margin-right: 4px; color: var(--color-primary);"></i> Book Consultation</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 NexZeal Technologies. All rights reserved. Craftsmanship in digital engineering.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Script Logic -->
+    <script src="js/main.js"></script>
+</body>
+</html>
