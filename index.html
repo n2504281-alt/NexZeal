@@ -143,59 +143,93 @@
     </section>
 
     <!-- ==========================================================================
-       3. TRUST SECTION
+       3. TRUST SECTION (BENTO GRID)
        ========================================================================== -->
-    <section class="section-padding bg-white-section" style="border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); position: relative;">
+    <section class="section-padding bg-mesh-gradient bg-dot-grid" style="border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); position: relative;">
         <div class="container">
             <div class="section-header reveal reveal-fade-up">
                 <h2 class="section-title">Designed for Excellence</h2>
                 <p class="section-subtitle">How we build trust, authority, and premium aesthetics for all client projects.</p>
             </div>
             
-            <div class="trust-grid">
-                <!-- Card 1 -->
-                <div class="trust-card card-base reveal reveal-fade-up delay-100">
-                    <div class="card-icon icon-pulse-subtle">
-                        <i data-lucide="sparkles"></i>
+            <div class="bento-grid">
+                <!-- Card 1: Large (2x2 span) -->
+                <div class="bento-card bento-large reveal reveal-fade-up delay-100">
+                    <div>
+                        <div class="card-icon icon-pulse-subtle" style="margin-bottom: 1.5rem;">
+                            <i data-lucide="sparkles"></i>
+                        </div>
+                        <h3 class="card-title" style="font-size: 1.8rem; margin-bottom: 1rem;">Modern Design Systems</h3>
+                        <p class="card-desc" style="max-width: 480px;">Handcrafted layouts built with clean visual hierarchy, bespoke spacing systems, and strict design rules that speak authority and premium quality.</p>
                     </div>
-                    <h3 class="card-title">Modern Design</h3>
-                    <p class="card-desc">Handcrafted layouts built with clean hierarchy, bespoke spacing, and strict style rules.</p>
+                    <div class="bento-illustration">
+                        <div style="width: 100%; display: flex; justify-content: space-around; font-size: 0.8rem; color: var(--text-secondary); flex-wrap: wrap; gap: 0.5rem;">
+                            <div class="bg-glass-blur" style="padding: 0.75rem 1.25rem; border-radius: 12px; display: flex; align-items: center; gap: 0.5rem;">
+                                <i data-lucide="check-circle" style="width: 14px; height: 14px; color: var(--color-primary);"></i>
+                                Typography Scale
+                            </div>
+                            <div class="bg-glass-blur" style="padding: 0.75rem 1.25rem; border-radius: 12px; display: flex; align-items: center; gap: 0.5rem;">
+                                <i data-lucide="check-circle" style="width: 14px; height: 14px; color: var(--color-primary);"></i>
+                                Color Tokens
+                            </div>
+                            <div class="bg-glass-blur" style="padding: 0.75rem 1.25rem; border-radius: 12px; display: flex; align-items: center; gap: 0.5rem;">
+                                <i data-lucide="check-circle" style="width: 14px; height: 14px; color: var(--color-primary);"></i>
+                                Grid Alignment
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
-                <!-- Card 2 -->
-                <div class="trust-card card-base reveal reveal-fade-up delay-200">
-                    <div class="card-icon icon-pulse-subtle">
-                        <i data-lucide="zap"></i>
+                <!-- Card 2: Medium Vertical (1x2 span) -->
+                <div class="bento-card bento-medium-v reveal reveal-fade-up delay-200">
+                    <div>
+                        <div class="card-icon icon-pulse-subtle" style="margin-bottom: 1.5rem;">
+                            <i data-lucide="zap"></i>
+                        </div>
+                        <h3 class="card-title" style="margin-bottom: 1rem;">Sub-Second Speed</h3>
+                        <p class="card-desc">Lightweight code bases structured specifically for rapid load times, low memory footprints, and 100% scores in core web performance metrics.</p>
                     </div>
-                    <h3 class="card-title">Fast Performance</h3>
-                    <p class="card-desc">Lightweight codes structured for sub-second load times and high scores in site health audits.</p>
+                    <div class="bento-illustration" style="flex-direction: column;">
+                        <span style="font-size: 3rem; font-weight: 800; color: var(--color-primary);">99</span>
+                        <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-secondary); margin-top: 0.25rem;">Performance Score</span>
+                    </div>
                 </div>
                 
-                <!-- Card 3 -->
-                <div class="trust-card card-base reveal reveal-fade-up delay-300">
-                    <div class="card-icon">
-                        <i data-lucide="smartphone"></i>
+                <!-- Card 3: Small (1x1 span) -->
+                <div class="bento-card bento-small reveal reveal-fade-up delay-300">
+                    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
+                        <div class="card-icon" style="flex-shrink: 0;">
+                            <i data-lucide="smartphone"></i>
+                        </div>
+                        <h3 class="card-title" style="margin: 0; font-size: 1.2rem;">Responsive Engine</h3>
                     </div>
-                    <h3 class="card-title">Responsive Experience</h3>
-                    <p class="card-desc">Consistent grid rendering on desktop screens, tables, and handheld mobile viewports.</p>
+                    <p class="card-desc" style="font-size: 0.9rem; margin: 0;">Consistent responsive rendering across desktop displays, tablets, and handheld viewports.</p>
                 </div>
                 
-                <!-- Card 4 -->
-                <div class="trust-card card-base reveal reveal-fade-up delay-400">
-                    <div class="card-icon">
-                        <i data-lucide="users"></i>
+                <!-- Card 4: Medium Horizontal (2x1 span) -->
+                <div class="bento-card bento-medium-h reveal reveal-fade-up delay-400">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; width: 100%;">
+                        <div style="max-width: 70%;">
+                            <h3 class="card-title" style="font-size: 1.4rem; margin-bottom: 0.5rem;">Collaboration Portal</h3>
+                            <p class="card-desc" style="font-size: 0.9rem; margin: 0;">Collaborate directly with design and development resources using real-time code and prototype pipelines.</p>
+                        </div>
+                        <div class="card-icon" style="flex-shrink: 0;">
+                            <i data-lucide="users"></i>
+                        </div>
                     </div>
-                    <h3 class="card-title">Client-Focused</h3>
-                    <p class="card-desc">Collaborating directly with key creators to ensure design parameters align with targeted goals.</p>
+                    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                        <span style="font-size: 0.75rem; padding: 0.25rem 0.75rem; border-radius: 20px; background: rgba(14, 165, 233, 0.08); color: var(--color-primary); font-weight: 600;">Daily Syncs</span>
+                        <span style="font-size: 0.75rem; padding: 0.25rem 0.75rem; border-radius: 20px; background: rgba(14, 165, 233, 0.08); color: var(--color-primary); font-weight: 600;">Shared Workspace</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ==========================================================================
-       4. SERVICES PREVIEW
+       4. SERVICES PREVIEW (HORIZONTAL SNAP CAROUSEL)
        ========================================================================== -->
-    <section class="section-padding bg-tinted-section" style="position: relative;">
+    <section class="section-padding bg-tinted-section bg-mesh-gradient" style="position: relative;">
         <!-- Blurred background blobs -->
         <div class="blur-circle-container">
             <div class="blur-circle blur-circle-primary" style="top: 20%; left: -10%;"></div>
@@ -207,64 +241,94 @@
                 <p class="section-subtitle">Premium web solutions configured to scale systems and build conversion streams.</p>
             </div>
             
-            <div class="services-grid">
-                <!-- Service 1 -->
-                <div class="service-card card-base reveal reveal-fade-up delay-100">
-                    <div class="service-icon">
-                        <i data-lucide="layout-dashboard"></i>
+            <div class="offerings-carousel-wrapper reveal reveal-fade-up">
+                <div class="offerings-carousel">
+                    <!-- Service 1 -->
+                    <div class="offering-card-premium">
+                        <div class="offering-card-bg-gradient"></div>
+                        <div style="z-index: 1;">
+                            <div class="service-icon icon-spin-hover" style="margin-bottom: 2rem;">
+                                <i data-lucide="layout-dashboard"></i>
+                            </div>
+                            <h3 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Website Design & Development</h3>
+                            <p class="card-desc" style="margin-bottom: 2rem;">Bespoke high-performance websites built with modern frameworks and pixel-perfect responsive layouts designed to convert.</p>
+                        </div>
+                        <a href="services.html" class="btn btn-secondary" style="align-self: flex-start; z-index: 1; padding: 0.5rem 1rem; font-size: 0.9rem;">
+                            Learn More
+                            <i data-lucide="arrow-right"></i>
+                        </a>
                     </div>
-                    <h3 class="card-title">Website Design & Development</h3>
-                    <p class="card-desc">Bespoke high-performance websites built with modern frameworks and pixel-perfect layouts.</p>
-                    <a href="services.html" class="service-link">
-                        Learn More
-                        <i data-lucide="arrow-right"></i>
-                    </a>
+                    
+                    <!-- Service 2 -->
+                    <div class="offering-card-premium">
+                        <div class="offering-card-bg-gradient"></div>
+                        <div style="z-index: 1;">
+                            <div class="service-icon icon-wiggle-hover" style="margin-bottom: 2rem;">
+                                <i data-lucide="palette"></i>
+                            </div>
+                            <h3 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">UI/UX Design</h3>
+                            <p class="card-desc" style="margin-bottom: 2rem;">Interactive wireframes, functional user flows, and aesthetic prototypes engineered around ease of use and user delight.</p>
+                        </div>
+                        <a href="services.html" class="btn btn-secondary" style="align-self: flex-start; z-index: 1; padding: 0.5rem 1rem; font-size: 0.9rem;">
+                            Learn More
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Service 3 -->
+                    <div class="offering-card-premium">
+                        <div class="offering-card-bg-gradient"></div>
+                        <div style="z-index: 1;">
+                            <div class="service-icon icon-pulse-subtle" style="margin-bottom: 2rem;">
+                                <i data-lucide="layers"></i>
+                            </div>
+                            <h3 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">WordPress & Elementor</h3>
+                            <p class="card-desc" style="margin-bottom: 2rem;">Highly customizable content management systems enabling clients to update, scale, and publish blog and landing pages independently.</p>
+                        </div>
+                        <a href="services.html" class="btn btn-secondary" style="align-self: flex-start; z-index: 1; padding: 0.5rem 1rem; font-size: 0.9rem;">
+                            Learn More
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Service 4 -->
+                    <div class="offering-card-premium">
+                        <div class="offering-card-bg-gradient"></div>
+                        <div style="z-index: 1;">
+                            <div class="service-icon icon-slide-up-hover" style="margin-bottom: 2rem;">
+                                <i data-lucide="gauge"></i>
+                            </div>
+                            <h3 class="card-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Website Optimization</h3>
+                            <p class="card-desc" style="margin-bottom: 2rem;">Compressing media assets, structural code tuning, caching strategies, and SEO meta tags configuration for higher SERP ranking.</p>
+                        </div>
+                        <a href="services.html" class="btn btn-secondary" style="align-self: flex-start; z-index: 1; padding: 0.5rem 1rem; font-size: 0.9rem;">
+                            Learn More
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
-                
-                <!-- Service 2 -->
-                <div class="service-card card-base reveal reveal-fade-up delay-200">
-                    <div class="service-icon">
-                        <i data-lucide="palette"></i>
+
+                <!-- Navigation Controls -->
+                <div class="carousel-nav">
+                    <button class="carousel-btn" id="carousel-prev" aria-label="Previous service">
+                        <i data-lucide="chevron-left"></i>
+                    </button>
+                    <div class="carousel-dots">
+                        <span class="carousel-dot active"></span>
+                        <span class="carousel-dot"></span>
+                        <span class="carousel-dot"></span>
+                        <span class="carousel-dot"></span>
                     </div>
-                    <h3 class="card-title">UI/UX Design</h3>
-                    <p class="card-desc">Interactive wireframes, functional flowcharts, and interfaces structured around ease of use.</p>
-                    <a href="services.html" class="service-link">
-                        Learn More
-                        <i data-lucide="arrow-right"></i>
-                    </a>
-                </div>
-                
-                <!-- Service 3 -->
-                <div class="service-card card-base reveal reveal-fade-up delay-300">
-                    <div class="service-icon">
-                        <i data-lucide="layers"></i>
-                    </div>
-                    <h3 class="card-title">WordPress & Elementor</h3>
-                    <p class="card-desc">Fully customizable layouts that clients can update, add content to, and edit independently.</p>
-                    <a href="services.html" class="service-link">
-                        Learn More
-                        <i data-lucide="arrow-right"></i>
-                    </a>
-                </div>
-                
-                <!-- Service 4 -->
-                <div class="service-card card-base reveal reveal-fade-up delay-400">
-                    <div class="service-icon">
-                        <i data-lucide="gauge"></i>
-                    </div>
-                    <h3 class="card-title">Website Optimization</h3>
-                    <p class="card-desc">Compressing payloads, managing meta tags, and configuring scripts to lift SEO ranks.</p>
-                    <a href="services.html" class="service-link">
-                        Learn More
-                        <i data-lucide="arrow-right"></i>
-                    </a>
+                    <button class="carousel-btn" id="carousel-next" aria-label="Next service">
+                        <i data-lucide="chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ==========================================================================
-       5. WHY CHOOSE US
+       5. WHY CHOOSE NEXZEAL (ALTERNATING TIMELINE BLOCKS)
        ========================================================================== -->
     <section class="section-padding bg-white-section" style="border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); position: relative;">
         <div class="container">
@@ -273,50 +337,75 @@
                 <p class="section-subtitle">We build for long-term growth, combining solid architecture with functional design.</p>
             </div>
             
-            <div class="why-grid">
-                <!-- Card 1 -->
-                <div class="why-card card-base reveal reveal-fade-up delay-100">
-                    <div class="why-icon icon-pulse-subtle">
-                        <i data-lucide="sparkles"></i>
+            <div class="timeline-alternating">
+                <!-- Block 1: Design & Integrity -->
+                <div class="timeline-block reveal reveal-fade-up">
+                    <div class="timeline-info">
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <span style="font-size: 0.75rem; padding: 0.25rem 0.75rem; border-radius: 20px; background: rgba(14, 165, 233, 0.08); color: var(--color-primary); font-weight: 700; text-transform: uppercase;">01 / Layout Systems</span>
+                        </div>
+                        <h3 class="section-title" style="font-size: 2rem; text-align: left; margin: 0;">Modern Design & Clean Code Integrity</h3>
+                        <p class="card-desc" style="font-size: 1.05rem;">We align every digital asset strictly around bespoke typography scales and structural simplicity. No bloated page builders or generic AI aesthetics. Every line of code and UI pixel is handcrafted to inspire trust, authority, and premium conversion streams.</p>
                     </div>
-                    <h3 class="card-title">Modern Design</h3>
-                    <p class="card-desc">Bespoke layout grids built strictly around typography hierarchy and structural simplicity.</p>
+                    <div class="timeline-media">
+                        <div style="display: flex; flex-direction: column; gap: 1rem; padding: 1rem 0;">
+                            <div class="bg-glass-blur" style="padding: 1rem; border-radius: 16px; border: 1px solid var(--border-color); display: flex; align-items: center; gap: 1rem;">
+                                <i data-lucide="shield" style="color: var(--color-primary); width: 20px; height: 20px;"></i>
+                                <span style="font-weight: 600;">Handcrafted Grid Layouts</span>
+                            </div>
+                            <div class="bg-glass-blur" style="padding: 1rem; border-radius: 16px; border: 1px solid var(--border-color); display: flex; align-items: center; gap: 1rem;">
+                                <i data-lucide="sparkles" style="color: var(--color-primary); width: 20px; height: 20px;"></i>
+                                <span style="font-weight: 600;">Tailored Typography Systems</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-                <!-- Card 2 -->
-                <div class="why-card card-base reveal reveal-fade-up delay-200">
-                    <div class="why-icon">
-                        <i data-lucide="briefcase"></i>
+
+                <!-- Block 2: Performance & Speed -->
+                <div class="timeline-block reveal reveal-fade-up">
+                    <div class="timeline-info">
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <span style="font-size: 0.75rem; padding: 0.25rem 0.75rem; border-radius: 20px; background: rgba(14, 165, 233, 0.08); color: var(--color-primary); font-weight: 700; text-transform: uppercase;">02 / Performance</span>
+                        </div>
+                        <h3 class="section-title" style="font-size: 2rem; text-align: left; margin: 0;">Built for Sub-Second Performance</h3>
+                        <p class="card-desc" style="font-size: 1.05rem;">Slow load times kill bounce rates and conversion paths. NexZeal structures light script configurations and image delivery networks to ensure desktop and mobile visitors experience sub-second interactions from the first load.</p>
                     </div>
-                    <h3 class="card-title">Business Focused</h3>
-                    <p class="card-desc">We align digital setups with measurable goals, helping convert site visits into sales inquiries.</p>
+                    <div class="timeline-media">
+                        <div style="display: flex; justify-content: center; align-items: center; min-height: 160px;">
+                            <div class="icon-pulse-subtle" style="text-align: center;">
+                                <i data-lucide="zap" style="width: 48px; height: 48px; color: var(--color-primary); margin-bottom: 0.75rem;"></i>
+                                <h4 style="font-size: 1.25rem; font-weight: 800; margin: 0;">100% Core Web Vitals</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-                <!-- Card 3 -->
-                <div class="why-card card-base reveal reveal-fade-up delay-300">
-                    <div class="why-icon icon-pulse-subtle">
-                        <i data-lucide="zap"></i>
+
+                <!-- Block 3: Support Loops -->
+                <div class="timeline-block reveal reveal-fade-up">
+                    <div class="timeline-info">
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <span style="font-size: 0.75rem; padding: 0.25rem 0.75rem; border-radius: 20px; background: rgba(14, 165, 233, 0.08); color: var(--color-primary); font-weight: 700; text-transform: uppercase;">03 / Operations</span>
+                        </div>
+                        <h3 class="section-title" style="font-size: 2rem; text-align: left; margin: 0;">Reliable Post-Launch Support Loops</h3>
+                        <p class="card-desc" style="font-size: 1.05rem;">We do not disappear after deployment. NexZeal establishes structured check-in schedules, daily off-site database backup schedules, firewall audits, and visual updates to keep your systems running smoothly long-term.</p>
                     </div>
-                    <h3 class="card-title">Performance First</h3>
-                    <p class="card-desc">Clean engineering ensures fast loading, keeping bounce rates low and customer retention high.</p>
-                </div>
-                
-                <!-- Card 4 -->
-                <div class="why-card card-base reveal reveal-fade-up delay-400">
-                    <div class="why-icon">
-                        <i data-lucide="headset"></i>
+                    <div class="timeline-media">
+                        <div style="display: flex; flex-direction: column; gap: 1rem; padding: 1rem 0;">
+                            <div class="bg-glass-blur" style="padding: 1.25rem; border-radius: 16px; border: 1px solid var(--border-color); display: flex; align-items: center; gap: 1rem;">
+                                <i data-lucide="headset" style="color: var(--color-primary); width: 22px; height: 22px;"></i>
+                                <span style="font-weight: 600;">24/7 Server Status Monitors</span>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="card-title">Reliable Support</h3>
-                    <p class="card-desc">Continuous feedback loops, active updates, and database backup schedules long after launch.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ==========================================================================
-       6. FEATURED PORTFOLIO
+       6. FEATURED PORTFOLIO (HORIZONTAL PROJECT SLIDER)
        ========================================================================== -->
-    <section class="section-padding bg-gradient-section" style="position: relative;">
+    <section class="section-padding bg-mesh-gradient bg-dot-grid" style="position: relative;">
         <!-- Blurred background blobs -->
         <div class="blur-circle-container">
             <div class="blur-circle blur-circle-primary" style="top: 10%; right: -10%;"></div>
@@ -328,140 +417,324 @@
                 <p class="section-subtitle">Take a look at premium mockups of modern layouts we designed and built.</p>
             </div>
             
-            <div class="work-grid">
-                <!-- Case 1 -->
-                <div class="work-card card-base reveal reveal-fade-up delay-100" onclick="location.href='portfolio.html'">
-                    <div class="work-img-wrap">
-                        <img src="assets/project_1.png" alt="SaaS Analytics Platform" width="360" height="270">
-                    </div>
-                    <div class="work-info">
-                        <div class="work-category">Software Engineering</div>
-                        <h3 class="work-title">SaaS Analytics Platform</h3>
-                        <p class="work-desc">Metric interfaces plotting server data, user charts, and database logs.</p>
-                        <div class="work-techs">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">ChartJS</span>
+            <div class="project-slider-container reveal reveal-fade-up">
+                <div class="project-slider-viewport">
+                    <div class="project-slides-track">
+                        <!-- Project Slide 1 -->
+                        <div class="project-slide-item">
+                            <div class="project-slide-image">
+                                <img src="assets/project_1.png" alt="SaaS Analytics Platform" width="640" height="480">
+                                <div class="project-slide-glass-overlay">
+                                    <div style="text-align: left;">
+                                        <span style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--color-primary);">Featured SaaS</span>
+                                        <h4 style="margin: 0.25rem 0 0; font-size: 1.15rem; font-weight: 800;">Analytics Engine</h4>
+                                    </div>
+                                    <a href="portfolio.html" class="carousel-btn" style="width: 40px; height: 40px;" aria-label="View Project Details">
+                                        <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-slide-details">
+                                <span style="font-size: 0.75rem; padding: 0.25rem 0.75rem; border-radius: 20px; background: rgba(14, 165, 233, 0.08); color: var(--color-primary); font-weight: 700; align-self: flex-start; text-transform: uppercase;">Software Engineering</span>
+                                <h3 style="font-size: 2.25rem; font-weight: 800; margin: 0.5rem 0;">SaaS Analytics Platform</h3>
+                                <p class="card-desc">Metric interfaces plotting server data, user charts, and database logs with millisecond refreshes.</p>
+                                <div class="work-techs" style="margin-top: 0.5rem;">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">ChartJS</span>
+                                </div>
+                                <div class="project-metrics-grid">
+                                    <div class="metric-stat-item">
+                                        <h5>99.9%</h5>
+                                        <p>Uptime Record</p>
+                                    </div>
+                                    <div class="metric-stat-item">
+                                        <h5>+40%</h5>
+                                        <p>Conversion Lift</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <a href="portfolio.html" class="work-link">
-                            View Project
-                            <i data-lucide="arrow-right"></i>
-                        </a>
+
+                        <!-- Project Slide 2 -->
+                        <div class="project-slide-item">
+                            <div class="project-slide-image">
+                                <img src="assets/project_2.png" alt="Arc Portfolio Studio" width="640" height="480">
+                                <div class="project-slide-glass-overlay">
+                                    <div style="text-align: left;">
+                                        <span style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--color-primary);">Featured Studio</span>
+                                        <h4 style="margin: 0.25rem 0 0; font-size: 1.15rem; font-weight: 800;">Arc Architecture</h4>
+                                    </div>
+                                    <a href="portfolio.html" class="carousel-btn" style="width: 40px; height: 40px;" aria-label="View Project Details">
+                                        <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-slide-details">
+                                <span style="font-size: 0.75rem; padding: 0.25rem 0.75rem; border-radius: 20px; background: rgba(14, 165, 233, 0.08); color: var(--color-primary); font-weight: 700; align-self: flex-start; text-transform: uppercase;">Web Development</span>
+                                <h3 style="font-size: 2.25rem; font-weight: 800; margin: 0.5rem 0;">Arc Portfolio Studio</h3>
+                                <p class="card-desc">High-end architecture layouts designed around spacious grids and fluid GLSL canvas transitions.</p>
+                                <div class="work-techs" style="margin-top: 0.5rem;">
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3</span>
+                                    <span class="tech-tag">GLSL</span>
+                                </div>
+                                <div class="project-metrics-grid">
+                                    <div class="metric-stat-item">
+                                        <h5>120ms</h5>
+                                        <p>Average Load Time</p>
+                                    </div>
+                                    <div class="metric-stat-item">
+                                        <h5>15+</h5>
+                                        <p>Pages Per Session</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project Slide 3 -->
+                        <div class="project-slide-item">
+                            <div class="project-slide-image">
+                                <img src="assets/project_3.png" alt="Flow Schedule Suite" width="640" height="480">
+                                <div class="project-slide-glass-overlay">
+                                    <div style="text-align: left;">
+                                        <span style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--color-primary);">Featured SaaS</span>
+                                        <h4 style="margin: 0.25rem 0 0; font-size: 1.15rem; font-weight: 800;">Flow Calendar</h4>
+                                    </div>
+                                    <a href="portfolio.html" class="carousel-btn" style="width: 40px; height: 40px;" aria-label="View Project Details">
+                                        <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-slide-details">
+                                <span style="font-size: 0.75rem; padding: 0.25rem 0.75rem; border-radius: 20px; background: rgba(14, 165, 233, 0.08); color: var(--color-primary); font-weight: 700; align-self: flex-start; text-transform: uppercase;">UI/UX Design</span>
+                                <h3 style="font-size: 2.25rem; font-weight: 800; margin: 0.5rem 0;">Flow Schedule Suite</h3>
+                                <p class="card-desc">Modern calendar dashboards making user meeting queues simple, visual, and highly responsive.</p>
+                                <div class="work-techs" style="margin-top: 0.5rem;">
+                                    <span class="tech-tag">Figma</span>
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Tailwind</span>
+                                </div>
+                                <div class="project-metrics-grid">
+                                    <div class="metric-stat-item">
+                                        <h5>2.4x</h5>
+                                        <p>Booking Speedup</p>
+                                    </div>
+                                    <div class="metric-stat-item">
+                                        <h5>95%</h5>
+                                        <p>User Retention</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Case 2 -->
-                <div class="work-card card-base reveal reveal-fade-up delay-200" onclick="location.href='portfolio.html'">
-                    <div class="work-img-wrap">
-                        <img src="assets/project_2.png" alt="Arc Portfolio Studio" width="360" height="270">
+
+                <!-- Footer Slider Navigation & Progress -->
+                <div class="slider-controls-footer">
+                    <button class="carousel-btn" id="project-prev" aria-label="Previous slide">
+                        <i data-lucide="arrow-left"></i>
+                    </button>
+                    <div class="slider-progress-bar-wrapper">
+                        <div class="slider-progress-bar-fill"></div>
                     </div>
-                    <div class="work-info">
-                        <div class="work-category">Web Development</div>
-                        <h3 class="work-title">Arc Portfolio Studio</h3>
-                        <p class="work-desc">High-end architecture layouts designed around spacious grids and masonry lists.</p>
-                        <div class="work-techs">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">GLSL</span>
-                        </div>
-                        <a href="portfolio.html" class="work-link">
-                            View Project
-                            <i data-lucide="arrow-right"></i>
-                        </a>
-                    </div>
+                    <button class="carousel-btn" id="project-next" aria-label="Next slide">
+                        <i data-lucide="arrow-right"></i>
+                    </button>
                 </div>
-                
-                <!-- Case 3 -->
-                <div class="work-card card-base reveal reveal-fade-up delay-300" onclick="location.href='portfolio.html'">
-                    <div class="work-img-wrap">
-                        <img src="assets/project_3.png" alt="Flow Schedule Suite" width="360" height="270">
-                    </div>
-                    <div class="work-info">
-                        <div class="work-category">UI/UX Design</div>
-                        <h3 class="work-title">Flow Schedule Suite</h3>
-                        <p class="work-desc">Modern calendar dashboards making user meeting queues simple and organized.</p>
-                        <div class="work-techs">
-                            <span class="tech-tag">Figma</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Tailwind</span>
-                        </div>
-                        <a href="portfolio.html" class="work-link">
-                            View Project
-                            <i data-lucide="arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="portfolio-cta reveal reveal-fade-up">
-                <a href="portfolio.html" class="btn btn-secondary">View All Projects</a>
             </div>
         </div>
     </section>
 
     <!-- ==========================================================================
-       7. OUR PROCESS TIMELINE
+       7. OUR PROCESS (ANIMATED TIMELINE FLOW)
        ========================================================================== -->
-    <section class="section-padding bg-tinted-section" style="border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); position: relative;">
+    <section class="section-padding bg-tinted-section bg-mesh-gradient bg-dot-grid" style="border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); position: relative;">
         <div class="container">
             <div class="section-header reveal reveal-fade-up">
                 <h2 class="section-title">Our Process</h2>
-                <p class="section-subtitle">How we transition ideas into robust digital platforms in four steps.</p>
+                <p class="section-subtitle">How we transition ideas into robust digital platforms in six structured phases.</p>
             </div>
             
-            <div class="process-grid">
-                <!-- Card 1 -->
-                <div class="process-card card-base reveal reveal-fade-up delay-100">
-                    <div class="process-icon"><i data-lucide="search"></i></div>
-                    <div class="process-number">01</div>
-                    <h3 class="card-title">Discover</h3>
-                    <p class="card-desc">Defining metrics, planning system maps, and writing brief scopes to align target parameters.</p>
+            <div class="process-animated-flow reveal reveal-fade-up">
+                <!-- SVG Connector Line -->
+                <div class="process-svg-path-container">
+                    <svg width="100%" height="10" viewBox="0 0 1000 10" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="0" y1="5" x2="1000" y2="5" class="process-svg-line" />
+                        <line x1="0" y1="5" x2="1000" y2="5" class="process-svg-line-active" />
+                    </svg>
                 </div>
                 
-                <!-- Card 2 -->
-                <div class="process-card card-base reveal reveal-fade-up delay-200">
-                    <div class="process-icon icon-wiggle-hover"><i data-lucide="compass"></i></div>
-                    <div class="process-number">02</div>
-                    <h3 class="card-title">Design</h3>
-                    <p class="card-desc">Drafting wireframes, vector styles, typography layouts, and interactive mockup previews.</p>
-                </div>
-                
-                <!-- Card 3 -->
-                <div class="process-card card-base reveal reveal-fade-up delay-300">
-                    <div class="process-icon"><i data-lucide="code"></i></div>
-                    <div class="process-number">03</div>
-                    <h3 class="card-title">Develop</h3>
-                    <p class="card-desc">Writing modular, light code structures and database hooks optimized for quick response speeds.</p>
-                </div>
-                
-                <!-- Card 4 -->
-                <div class="process-card card-base reveal reveal-fade-up delay-400">
-                    <div class="process-icon icon-slide-up-hover"><i data-lucide="rocket"></i></div>
-                    <div class="process-number">04</div>
-                    <h3 class="card-title">Launch</h3>
-                    <p class="card-desc">Final script audits, server deployment checklists, and analytics configurations.</p>
+                <div class="process-flow-grid">
+                    <!-- Step 1 -->
+                    <div class="process-flow-node reveal reveal-fade-up delay-100">
+                        <div class="process-flow-circle">
+                            <i data-lucide="search" style="width: 28px; height: 28px;"></i>
+                        </div>
+                        <span class="process-flow-step-num">Step 01</span>
+                        <h4 style="font-weight: 700; font-size: 1.1rem; margin: 0.5rem 0;">Discover</h4>
+                        <p class="card-desc" style="font-size: 0.85rem; padding: 0 0.5rem;">Defining metrics and scopes.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="process-flow-node reveal reveal-fade-up delay-200">
+                        <div class="process-flow-circle">
+                            <i data-lucide="compass" style="width: 28px; height: 28px;"></i>
+                        </div>
+                        <span class="process-flow-step-num">Step 02</span>
+                        <h4 style="font-weight: 700; font-size: 1.1rem; margin: 0.5rem 0;">Design</h4>
+                        <p class="card-desc" style="font-size: 0.85rem; padding: 0 0.5rem;">Drafting wireframes & UI styles.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="process-flow-node reveal reveal-fade-up delay-300">
+                        <div class="process-flow-circle">
+                            <i data-lucide="code" style="width: 28px; height: 28px;"></i>
+                        </div>
+                        <span class="process-flow-step-num">Step 03</span>
+                        <h4 style="font-weight: 700; font-size: 1.1rem; margin: 0.5rem 0;">Develop</h4>
+                        <p class="card-desc" style="font-size: 0.85rem; padding: 0 0.5rem;">Writing fast modular script code.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="process-flow-node reveal reveal-fade-up delay-400">
+                        <div class="process-flow-circle">
+                            <i data-lucide="check-square" style="width: 28px; height: 28px;"></i>
+                        </div>
+                        <span class="process-flow-step-num">Step 04</span>
+                        <h4 style="font-weight: 700; font-size: 1.1rem; margin: 0.5rem 0;">Audit</h4>
+                        <p class="card-desc" style="font-size: 0.85rem; padding: 0 0.5rem;">Pixel audit & quality test.</p>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="process-flow-node reveal reveal-fade-up delay-500">
+                        <div class="process-flow-circle">
+                            <i data-lucide="rocket" style="width: 28px; height: 28px;"></i>
+                        </div>
+                        <span class="process-flow-step-num">Step 05</span>
+                        <h4 style="font-weight: 700; font-size: 1.1rem; margin: 0.5rem 0;">Launch</h4>
+                        <p class="card-desc" style="font-size: 0.85rem; padding: 0 0.5rem;">Server setup & DNS check.</p>
+                    </div>
+
+                    <!-- Step 6 -->
+                    <div class="process-flow-node reveal reveal-fade-up delay-600">
+                        <div class="process-flow-circle">
+                            <i data-lucide="refresh-cw" style="width: 28px; height: 28px;"></i>
+                        </div>
+                        <span class="process-flow-step-num">Step 06</span>
+                        <h4 style="font-weight: 700; font-size: 1.1rem; margin: 0.5rem 0;">Optimize</h4>
+                        <p class="card-desc" style="font-size: 0.85rem; padding: 0 0.5rem;">Ongoing backup & analysis.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ==========================================================================
-       8. CTA SECTION
+       8. TESTIMONIALS SECTION (PREMIUM SLIDER)
        ========================================================================== -->
-    <section class="section-padding cta-section bg-gradient-section" style="position: relative; overflow: hidden;">
-        <!-- Blurred background blobs -->
-        <div class="blur-circle-container">
-            <div class="blur-circle blur-circle-primary" style="top: -20%; right: -10%;"></div>
-            <div class="blur-circle blur-circle-secondary" style="bottom: -20%; left: -10%;"></div>
+    <section class="section-padding bg-white-section" style="border-bottom: 1px solid var(--border-color); position: relative;">
+        <div class="container">
+            <div class="section-header reveal reveal-fade-up">
+                <h2 class="section-title">Client Success Stories</h2>
+                <p class="section-subtitle">Read how our fast systems and designs help client companies grow.</p>
+            </div>
+            
+            <div class="testimonial-section-container reveal reveal-fade-up">
+                <div class="testimonials-viewport">
+                    <div class="testimonials-track">
+                        <!-- Slide 1 -->
+                        <div class="testimonial-slide-premium">
+                            <div class="testimonial-rating">
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                            </div>
+                            <blockquote class="testimonial-quote-box">
+                                "NexZeal transformed our online store. Our page load speed dropped under a second, and our sales increased by 45% within three months."
+                            </blockquote>
+                            <div class="testimonial-meta">
+                                <img src="assets/avatar_1.png" alt="Sarah Jenkins" class="testimonial-photo" width="60" height="60">
+                                <div class="testimonial-client-info">
+                                    <h4>Sarah Jenkins</h4>
+                                    <p>Director of Product, RetailFlow</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="testimonial-slide-premium">
+                            <div class="testimonial-rating">
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                            </div>
+                            <blockquote class="testimonial-quote-box">
+                                "The design systems and clean layouts NexZeal delivered have significantly improved our team's workflow and design consistency across all portals."
+                            </blockquote>
+                            <div class="testimonial-meta">
+                                <img src="assets/avatar_2.png" alt="Marcus Vance" class="testimonial-photo" width="60" height="60">
+                                <div class="testimonial-client-info">
+                                    <h4>Marcus Vance</h4>
+                                    <p>Co-Founder, DevPortal</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="testimonial-slide-premium">
+                            <div class="testimonial-rating">
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                            </div>
+                            <blockquote class="testimonial-quote-box">
+                                "Their attention to code performance and details is unmatched. We saw instant ranks increases in our search results after optimization."
+                            </blockquote>
+                            <div class="testimonial-meta">
+                                <img src="assets/avatar_3.png" alt="Elena Rostova" class="testimonial-photo" width="60" height="60">
+                                <div class="testimonial-client-info">
+                                    <h4>Elena Rostova</h4>
+                                    <p>Head of Marketing, CloudScale</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Slider dots -->
+                <div class="carousel-dots" style="justify-content: center; margin-top: 2.5rem;">
+                    <span class="carousel-dot active testimonial-dot"></span>
+                    <span class="carousel-dot testimonial-dot"></span>
+                    <span class="carousel-dot testimonial-dot"></span>
+                </div>
+            </div>
         </div>
-        <div class="container" style="position: relative; z-index: 1;">
-            <div class="cta-box reveal reveal-fade-up">
-                <h2 class="cta-title">Ready to Build Your Next Digital Experience?</h2>
-                <p class="cta-desc">Get in touch to review project goals. We will outline target architectures and construct a clean roadmap forward.</p>
-                <a href="contact.html" class="btn btn-primary">
-                    Let's Work Together
-                    <i data-lucide="arrow-right"></i>
-                </a>
+    </section>
+
+    <!-- ==========================================================================
+       9. CTA SECTION (PREMIUM FULL WIDTH CONTAINER)
+       ========================================================================== -->
+    <section class="section-padding bg-mesh-gradient bg-dot-grid" style="position: relative; overflow: hidden; padding-bottom: 6rem;">
+        <div class="container">
+            <div class="cta-premium-box reveal reveal-fade-up">
+                <div class="cta-premium-glow-1"></div>
+                <div class="cta-premium-glow-2"></div>
+                
+                <div style="position: relative; z-index: 2;">
+                    <h2 class="cta-title" style="font-size: 2.85rem; font-weight: 800; margin-bottom: 1rem;">Ready to Build Your Next Digital Experience?</h2>
+                    <p class="cta-desc" style="max-width: 600px; margin: 0 auto 2.5rem; font-size: 1.15rem; opacity: 0.95;">Get in touch to review project goals. We will outline target architectures and construct a clean roadmap forward.</p>
+                    <a href="contact.html" class="btn btn-primary" style="padding: 1rem 2rem; font-size: 1.05rem;">
+                        Let's Work Together
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>

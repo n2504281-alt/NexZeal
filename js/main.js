@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
     initMobileNav();
     initActiveNav();
+    initHomepageRedesign();
     
     // Initialize Lucide Icons
     if (typeof lucide !== 'undefined') {
@@ -156,3 +157,143 @@ function initActiveNav() {
         }
     });
 }
+
+/* ==========================================================================
+   6. HOMEPAGE REDESIGN CONTROLLERS
+   ========================================================================== */
+function initHomepageRedesign() {
+    // 1. Scroll Snap Carousel (Core Offerings)
+    const carousel = document.querySelector('.offerings-carousel');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+
+    if (carousel) {
+        const updateDots = () => {
+            const width = carousel.offsetWidth;
+            const index = Math.round(carousel.scrollLeft / width);
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        };
+
+        carousel.addEventListener('scroll', updateDots, { passive: true });
+        
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                const width = carousel.offsetWidth;
+                carousel.scrollTo({
+                    left: i * width,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                const width = carousel.offsetWidth;
+                carousel.scrollBy({ left: -width, behavior: 'smooth' });
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                const width = carousel.offsetWidth;
+                carousel.scrollBy({ left: width, behavior: 'smooth' });
+            });
+        }
+    }
+
+    // 2. Project Slider (Selected Case Studies)
+    const track = document.querySelector('.project-slides-track');
+    const slides = document.querySelectorAll('.project-slide-item');
+    const projectPrev = document.getElementById('project-prev');
+    const projectNext = document.getElementById('project-next');
+    const progressFill = document.querySelector('.slider-progress-bar-fill');
+    let currentIdx = 0;
+
+    function updateProjectSlider() {
+        if (!track || slides.length === 0) return;
+        track.style.transform = `translateX(-${currentIdx * 100}%)`;
+        if (progressFill) {
+            progressFill.style.width = `${((currentIdx + 1) / slides.length) * 100}%`;
+        }
+    }
+
+    if (track && slides.length > 0) {
+        updateProjectSlider();
+
+        if (projectPrev) {
+            projectPrev.addEventListener('click', () => {
+                currentIdx = (currentIdx - 1 + slides.length) % slides.length;
+                updateProjectSlider();
+            });
+        }
+
+        if (projectNext) {
+            projectNext.addEventListener('click', () => {
+                currentIdx = (currentIdx + 1) % slides.length;
+                updateProjectSlider();
+            });
+        }
+    }
+
+    // 3. Testimonials Carousel
+    const tTrack = document.querySelector('.testimonials-track');
+    const tSlides = document.querySelectorAll('.testimonial-slide-premium');
+    const tDots = document.querySelectorAll('.testimonial-dot');
+    let tIdx = 0;
+    let autoplayTimer;
+
+    function showTestimonial(idx) {
+        if (!tTrack || tSlides.length === 0) return;
+        tTrack.style.transform = `translateX(-${idx * 100}%)`;
+        tDots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === idx);
+        });
+        tIdx = idx;
+    }
+
+    if (tTrack && tSlides.length > 0) {
+        showTestimonial(0);
+
+        const startAutoplay = () => {
+            autoplayTimer = setInterval(() => {
+                let next = (tIdx + 1) % tSlides.length;
+                showTestimonial(next);
+            }, 6000);
+        };
+
+        const resetAutoplay = () => {
+            clearInterval(autoplayTimer);
+            startAutoplay();
+        };
+
+        startAutoplay();
+
+        tDots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                showTestimonial(i);
+                resetAutoplay();
+            });
+        });
+    }
+
+    // 4. Process Timeline Animation
+    const nodes = document.querySelectorAll('.process-flow-node');
+    if ('IntersectionObserver' in window && nodes.length > 0) {
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { 
+            threshold: 0.1,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        nodes.forEach(n => obs.observe(n));
+    }
+}
+
