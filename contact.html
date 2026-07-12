@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — NexZeal Technologies</title>
+    <meta name="description" content="Get in touch directly with the NexZeal development team to start a new project.">
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <!-- ==========================================================================
+       A. NAVBAR
+       ========================================================================== -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo" aria-label="NexZeal Technologies Home">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="13 17 18 12 13 7"></polyline>
+                        <polyline points="6 17 11 12 6 7"></polyline>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">NexZeal</span>
+                    <span class="logo-sub">TECHNOLOGIES</span>
+                </div>
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="work.html" class="nav-link">Work</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-primary" style="padding: 0.65rem 1.25rem; font-size: 0.9rem;">
+                    Start a Project
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+                <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==========================================================================
+       B. PAGE HEADER
+       ========================================================================== -->
+    <header class="section-padding" style="background-color: var(--color-white); border-bottom: 1px solid var(--border-color); padding: 5rem 0;">
+        <div class="container" style="text-align: center;">
+            <span class="section-eyebrow">GET IN TOUCH</span>
+            <h1 class="section-title reveal" style="font-size: 3rem; max-width: 800px; margin: 0 auto 1.5rem;">Let's Talk</h1>
+            <p class="section-subtext reveal" style="max-width: 600px; margin: 0 auto;">No automated responses or routing filters. Fill out the form, and one of us will respond within one business day.</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       C. CONTACT LAYOUT
+       ========================================================================== -->
+    <main class="section-padding">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <!-- Contact Form Card -->
+                <div class="contact-card reveal">
+                    <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Message received! We will be in touch directly.'); this.reset();">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="e.g. John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="e.g. john@company.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="project-type">Project Type</label>
+                            <select id="project-type" name="project-type" class="form-control">
+                                <option value="web">Web Development</option>
+                                <option value="app">App Development</option>
+                                <option value="portfolio">Portfolio Website</option>
+                                <option value="seo">SEO Optimization</option>
+                                <option value="other">Other / Support</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Project Description</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" placeholder="Tell us what you are building..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="align-self: flex-start;">
+                            Send Message
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Info Sidebar -->
+                <div class="info-column">
+                    <div class="info-card reveal">
+                        <!-- Phone -->
+                        <div class="info-item">
+                            <div class="info-icon-box">
+                                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <h4>Call or Text</h4>
+                                <p>+91 9799562538</p>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="info-item">
+                            <div class="info-icon-box">
+                                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <h4>Email</h4>
+                                <p>info@nexzeal.com</p>
+                            </div>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="info-item">
+                            <div class="info-icon-box">
+                                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <h4>Headquarters</h4>
+                                <p>Rajasthan, India</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Mock -->
+                    <div class="map-mock-card reveal">
+                        <div class="map-placeholder">
+                            <span>Interactive Map Placeholder</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ==========================================================================
+       D. FOOTER
+       ========================================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="13 17 18 12 13 7"></polyline>
+                                <polyline points="6 17 11 12 6 7"></polyline>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-main">NexZeal</span>
+                            <span class="logo-sub">TECHNOLOGIES</span>
+                        </div>
+                    </a>
+                    <p class="footer-desc">A tight 4-person software engineering team building search-optimized web apps directly with clients since 2020.</p>
+                </div>
+                
+                <div class="footer-links-col">
+                    <h4 class="footer-links-title">Studio Links</h4>
+                    <ul class="footer-links-list">
+                        <li class="footer-link-item"><a href="index.html">Home</a></li>
+                        <li class="footer-link-item"><a href="services.html">Services</a></li>
+                        <li class="footer-link-item"><a href="work.html">Work</a></li>
+                        <li class="footer-link-item"><a href="about.html">About Us</a></li>
+                        <li class="footer-link-item"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact-info">
+                    <h4 class="footer-links-title">Get in Touch</h4>
+                    <div class="footer-contact-item">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <span>+91 9799562538</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span>info@nexzeal.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 NexZeal Technologies. All rights reserved.</p>
+                <p style="font-family: var(--font-mono); font-size: 0.75rem;">$ nexzeal --version 2026.1</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script File -->
+    <script src="js/main.js"></script>
+</body>
+</html>
