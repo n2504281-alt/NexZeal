@@ -1488,10 +1488,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    ========================================================================== */
 .cta-banner {
     background-color: var(--color-navy-deep);
-    color: var(--color-white);
+    color: #ffffff;
     padding: 5rem 0;
-    border-top: 1px solid rgba(23, 191, 174, 0.15);
-    border-bottom: 1px solid rgba(23, 191, 174, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .cta-box {
@@ -1511,34 +1511,37 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     width: 64px;
     height: 64px;
     border-radius: var(--radius-circle);
-    background-color: rgba(23, 191, 174, 0.1);
-    color: var(--color-teal);
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--color-brand-teal);
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(23, 191, 174, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .cta-content h2 {
     font-size: 2.25rem;
-    color: var(--color-white);
+    color: #ffffff;
     margin-bottom: 0.5rem;
 }
 
 .cta-content p {
     font-size: 1.05rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .cta-box .btn {
-    background-color: var(--color-teal);
-    color: var(--color-navy-deep);
+    background: var(--brand-gradient);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
     flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(21, 79, 147, 0.2);
 }
 
 .cta-box .btn:hover {
-    background-color: var(--color-teal-bright);
-    box-shadow: 0 8px 20px rgba(58, 223, 201, 0.3);
+    background: linear-gradient(135deg, var(--color-brand-teal) 0%, var(--color-brand-blue) 100%);
+    color: #ffffff;
+    box-shadow: 0 8px 25px rgba(0, 196, 179, 0.35);
 }
 
 /* ==========================================================================
