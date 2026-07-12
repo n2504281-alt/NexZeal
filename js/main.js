@@ -192,4 +192,13 @@ document.addEventListener('DOMContentLoaded', () => {
             typeChar();
         }
     }
+
+    // 5. Theme Toggle Logic
+    const themeToggles = document.querySelectorAll('.theme-toggle-btn');
+    themeToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const isDark = document.documentElement.classList.toggle('dark-theme');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+    });
 });
