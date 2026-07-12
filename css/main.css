@@ -375,7 +375,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    HERO SECTION
    ========================================================================== */
 .hero-section {
-    padding: 6rem 0;
+    padding: 3rem 0 6rem 0;
     position: relative;
     overflow: hidden;
 }
