@@ -862,13 +862,23 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     background-color: var(--color-paper);
 }
 
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.services-slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 0.5rem 0 1.5rem;
+    touch-action: pan-y;
+}
+
+.services-track {
+    display: flex;
     gap: 2rem;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
 }
 
 .service-card {
+    flex: 0 0 calc(33.333% - 1.333rem);
     background: var(--brand-gradient);
     color: #ffffff;
     border: 1px solid rgba(255, 255, 255, 0.12);
@@ -890,7 +900,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .service-illustration-wrapper {
-    height: 140px;
+    height: 160px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -898,20 +908,24 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     background-color: rgba(255, 255, 255, 0.12);
     border-radius: var(--radius-md);
     margin-bottom: 1.75rem;
-    color: #ffffff;
     overflow: hidden;
     transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.service-illustration-wrapper svg {
-    width: 64px;
-    height: 64px;
-    transition: var(--transition);
+.service-illustration-wrapper .service-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .service-card:hover .service-illustration-wrapper {
-    background-color: #ffffff;
-    color: var(--color-brand-blue);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.service-card:hover .service-illustration-wrapper .service-img {
+    transform: scale(1.05);
 }
 
 .service-card h3 {
@@ -944,6 +958,91 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .service-card:hover .service-card-arrow {
     background-color: var(--color-brand-teal);
     color: #ffffff;
+}
+
+/* Slider Navigation Controls */
+.slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3.5rem;
+}
+
+.slider-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-circle);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid var(--color-teal);
+    color: var(--color-teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 12px rgba(21, 79, 147, 0.15);
+}
+
+.slider-btn:hover:not(:disabled) {
+    background: var(--brand-gradient);
+    color: #ffffff;
+    border-color: transparent;
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0, 196, 179, 0.35);
+}
+
+.slider-btn:disabled {
+    opacity: 0.25;
+    border-color: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.2);
+    cursor: not-allowed;
+}
+
+.slider-dots {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.slider-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-dot.active {
+    width: 28px;
+    border-radius: 5px;
+    background-color: var(--color-teal-bright);
+    box-shadow: 0 0 10px rgba(0, 229, 208, 0.5);
+}
+
+.dark-theme .slider-dot {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.dark-theme .slider-dot.active {
+    background-color: var(--color-teal-bright);
+}
+
+@media (max-width: 1024px) {
+    .service-card {
+        flex: 0 0 calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 580px) {
+    .service-card {
+        flex: 0 0 100%;
+    }
+    .slider-controls {
+        margin-top: 2.5rem;
+        gap: 1.5rem;
+    }
 }
 
 /* Alternating service layouts for services.html */
@@ -1045,11 +1144,19 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     align-items: center;
     justify-content: center;
     color: var(--color-teal);
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.featured-work-thumb svg {
-    width: 48px;
-    height: 48px;
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.featured-work-card:hover .project-img {
+    transform: scale(1.05);
 }
 
 .featured-work-info {

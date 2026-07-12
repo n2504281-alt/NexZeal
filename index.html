@@ -15,6 +15,28 @@
 </head>
 <body>
 
+    <!-- SVG Gradients definitions for colourful feature icons -->
+    <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+        <defs>
+            <linearGradient id="icon-grad-users" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ff3b30" />
+                <stop offset="100%" stop-color="#ff9500" />
+            </linearGradient>
+            <linearGradient id="icon-grad-cloud" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00c6ff" />
+                <stop offset="100%" stop-color="#0072ff" />
+            </linearGradient>
+            <linearGradient id="icon-grad-search" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ffd200" />
+                <stop offset="100%" stop-color="#f7971e" />
+            </linearGradient>
+            <linearGradient id="icon-grad-shield" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#f857a6" />
+                <stop offset="100%" stop-color="#ff5858" />
+            </linearGradient>
+        </defs>
+    </svg>
+
     <!-- ==========================================================================
        A. NAVBAR
        ========================================================================== -->
@@ -156,7 +178,7 @@
                 <!-- Card 1 -->
                 <div class="feature-card reveal">
                     <div class="feature-icon-box">
-                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="feature-svg-icon" viewBox="0 0 24 24" width="24" height="24" stroke="url(#icon-grad-users)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                             <circle cx="9" cy="7" r="4"></circle>
                             <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -169,7 +191,7 @@
                 <!-- Card 2 -->
                 <div class="feature-card reveal">
                     <div class="feature-icon-box">
-                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="feature-svg-icon" viewBox="0 0 24 24" width="24" height="24" stroke="url(#icon-grad-cloud)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="16 16 12 12 8 16"></polyline>
                             <line x1="12" y1="12" x2="12" y2="21"></line>
                             <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path>
@@ -182,7 +204,7 @@
                 <!-- Card 3 -->
                 <div class="feature-card reveal">
                     <div class="feature-icon-box">
-                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="feature-svg-icon" viewBox="0 0 24 24" width="24" height="24" stroke="url(#icon-grad-search)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="11" cy="11" r="8"></circle>
                             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                         </svg>
@@ -193,7 +215,7 @@
                 <!-- Card 4 -->
                 <div class="feature-card reveal">
                     <div class="feature-icon-box">
-                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="feature-svg-icon" viewBox="0 0 24 24" width="24" height="24" stroke="url(#icon-grad-shield)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                         </svg>
                     </div>
@@ -255,106 +277,105 @@
                 <p class="section-subtext">Bespoke technical execution engineered around simplicity, performance, and conversion value.</p>
             </div>
             
-            <div class="services-grid">
-                <!-- Service 1 -->
-                <div class="service-card reveal">
-                    <div class="service-illustration-wrapper">
-                        <!-- Custom vector browser layout mockup -->
-                        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                            <line x1="2" y1="8" x2="22" y2="8"></line>
-                            <circle cx="5" cy="5.5" r="0.5"></circle>
-                            <circle cx="8" cy="5.5" r="0.5"></circle>
-                            <circle cx="11" cy="5.5" r="0.5"></circle>
-                        </svg>
+            <div class="services-slider-wrapper">
+                <div class="services-track">
+                    <!-- Service 1 -->
+                    <div class="service-card reveal">
+                        <div class="service-illustration-wrapper">
+                            <img src="img/service_web_dev.png" alt="Web Development" class="service-img">
+                        </div>
+                        <h3>Web Development</h3>
+                        <p>Clean-code, high-performance web systems built with modern stacks (React, Next.js) configured to scale effortlessly.</p>
+                        <a href="services.html" class="service-card-arrow" aria-label="Learn more about Web Development">
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
                     </div>
-                    <h3>Web Development</h3>
-                    <p>Clean-code, high-performance web systems built with modern stacks (React, Next.js) configured to scale effortlessly.</p>
-                    <a href="services.html" class="service-card-arrow" aria-label="Learn more about Web Development">
-                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </a>
-                </div>
-                
-                <!-- Service 2 -->
-                <div class="service-card reveal">
-                    <div class="service-illustration-wrapper">
-                        <!-- Custom vector mobile layout mockup -->
-                        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
-                            <line x1="9" y1="5" x2="15" y2="5"></line>
-                        </svg>
+                    
+                    <!-- Service 2 -->
+                    <div class="service-card reveal">
+                        <div class="service-illustration-wrapper">
+                            <img src="img/service_app_dev.png" alt="App Development" class="service-img">
+                        </div>
+                        <h3>App Development</h3>
+                        <p>Tailored iOS, Android, and cross-platform applications focused on sub-second interactions, visual delight, and native speed.</p>
+                        <a href="services.html" class="service-card-arrow" aria-label="Learn more about App Development">
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
                     </div>
-                    <h3>App Development</h3>
-                    <p>Tailored iOS, Android, and cross-platform applications focused on sub-second interactions, visual delight, and native speed.</p>
-                    <a href="services.html" class="service-card-arrow" aria-label="Learn more about App Development">
-                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </a>
-                </div>
 
-                <!-- Service 3 -->
-                <div class="service-card reveal">
-                    <div class="service-illustration-wrapper">
-                        <!-- Custom vector portfolio screen mockup -->
-                        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                            <polyline points="2 17 12 22 22 17"></polyline>
-                            <polyline points="2 12 12 17 22 12"></polyline>
-                        </svg>
+                    <!-- Service 3 -->
+                    <div class="service-card reveal">
+                        <div class="service-illustration-wrapper">
+                            <img src="img/service_portfolio.png" alt="Portfolio Websites" class="service-img">
+                        </div>
+                        <h3>Portfolio Websites</h3>
+                        <p>Stunning, tailored portfolio platforms engineered to showcase projects with premium animations, grid structures, and typography scales.</p>
+                        <a href="services.html" class="service-card-arrow" aria-label="Learn more about Portfolio Websites">
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
                     </div>
-                    <h3>Portfolio Websites</h3>
-                    <p>Stunning, tailored portfolio platforms engineered to showcase projects with premium animations, grid structures, and typography scales.</p>
-                    <a href="services.html" class="service-card-arrow" aria-label="Learn more about Portfolio Websites">
-                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </a>
-                </div>
 
-                <!-- Service 4 -->
-                <div class="service-card reveal">
-                    <div class="service-illustration-wrapper">
-                        <!-- Custom vector search/analytics graphic -->
-                        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                            <line x1="8" y1="11" x2="14" y2="11"></line>
-                        </svg>
+                    <!-- Service 4 -->
+                    <div class="service-card reveal">
+                        <div class="service-illustration-wrapper">
+                            <img src="img/service_seo.png" alt="SEO Optimization" class="service-img">
+                        </div>
+                        <h3>SEO Optimization</h3>
+                        <p>Light configuration structures, micro-meta tags, indexation frameworks, and speed configurations designed to place your pages on top.</p>
+                        <a href="services.html" class="service-card-arrow" aria-label="Learn more about SEO Optimization">
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
                     </div>
-                    <h3>SEO Optimization</h3>
-                    <p>Light configuration structures, micro-meta tags, indexation frameworks, and speed configurations designed to place your pages on top.</p>
-                    <a href="services.html" class="service-card-arrow" aria-label="Learn more about SEO Optimization">
-                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </a>
-                </div>
 
-                <!-- Service 5 -->
-                <div class="service-card reveal">
-                    <div class="service-illustration-wrapper">
-                        <!-- Custom vector support/chat graphic -->
-                        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                        </svg>
+                    <!-- Service 5 -->
+                    <div class="service-card reveal">
+                        <div class="service-illustration-wrapper">
+                            <img src="img/service_support.png" alt="Support & Maintenance" class="service-img">
+                        </div>
+                        <h3>Support & Maintenance</h3>
+                        <p>Structured daily off-site backups, check-in updates, visual styling tweaks, and server monitors to keep your system safe long-term.</p>
+                        <a href="services.html" class="service-card-arrow" aria-label="Learn more about Support and Maintenance">
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
                     </div>
-                    <h3>Support & Maintenance</h3>
-                    <p>Structured daily off-site backups, check-in updates, visual styling tweaks, and server monitors to keep your system safe long-term.</p>
-                    <a href="services.html" class="service-card-arrow" aria-label="Learn more about Support and Maintenance">
-                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </a>
                 </div>
+            </div>
+
+            <div class="slider-controls">
+                <button class="slider-btn prev-btn" aria-label="Previous Service">
+                    <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                </button>
+                <div class="slider-dots">
+                    <span class="slider-dot active" data-index="0"></span>
+                    <span class="slider-dot" data-index="1"></span>
+                    <span class="slider-dot" data-index="2"></span>
+                    <span class="slider-dot" data-index="3"></span>
+                    <span class="slider-dot" data-index="4"></span>
+                </div>
+                <button class="slider-btn next-btn" aria-label="Next Service">
+                    <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </button>
             </div>
         </div>
     </section>
@@ -423,10 +444,7 @@
                 <!-- Project 1 -->
                 <div class="featured-work-card reveal">
                     <div class="featured-work-thumb">
-                        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
-                            <line x1="7" y1="2" x2="7" y2="22"></line>
-                        </svg>
+                        <img src="img/project_crm.png" alt="VentureCRM Platform" class="project-img">
                     </div>
                     <div class="featured-work-info">
                         <span class="featured-work-tag">Next.js / Web Application</span>
@@ -445,9 +463,7 @@
                 <!-- Project 2 -->
                 <div class="featured-work-card reveal">
                     <div class="featured-work-thumb">
-                        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                        </svg>
+                        <img src="img/project_catalog.png" alt="OmniCare Catalog" class="project-img">
                     </div>
                     <div class="featured-work-info">
                         <span class="featured-work-tag">Custom APIs / Speed Setup</span>
@@ -466,9 +482,7 @@
                 <!-- Project 3 -->
                 <div class="featured-work-card reveal">
                     <div class="featured-work-thumb">
-                        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                        </svg>
+                        <img src="img/project_pulse.png" alt="HomePulse Dashboard" class="project-img">
                     </div>
                     <div class="featured-work-info">
                         <span class="featured-work-tag">Real-Time SaaS / Node Monitor</span>

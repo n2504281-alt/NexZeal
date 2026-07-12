@@ -201,4 +201,137 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
         });
     });
+
+    // 6. Services Slider & Touch Swipe Logic
+    const track = document.querySelector('.services-track');
+    const cards = document.querySelectorAll('.service-card');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const dots = document.querySelectorAll('.slider-dot');
+
+    if (track && cards.length > 0 && prevBtn && nextBtn) {
+        let currentIndex = 0;
+        
+        const getVisibleCardsCount = () => {
+            if (window.innerWidth <= 580) return 1;
+            if (window.innerWidth <= 1024) return 2;
+            return 3;
+        };
+
+        const updateSlider = () => {
+            const visibleCards = getVisibleCardsCount();
+            const maxIndex = Math.max(0, cards.length - visibleCards);
+            
+            if (currentIndex > maxIndex) {
+                currentIndex = maxIndex;
+            }
+            if (currentIndex < 0) {
+                currentIndex = 0;
+            }
+
+            const cardWidth = cards[0].offsetWidth;
+            const gap = parseFloat(window.getComputedStyle(track).gap) || 32;
+            const step = cardWidth + gap;
+            const translate = -currentIndex * step;
+
+            track.style.transform = `translateX(${translate}px)`;
+
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex === maxIndex;
+
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+                if (index > maxIndex) {
+                    dot.style.display = 'none';
+                } else {
+                    dot.style.display = 'inline-block';
+                }
+            });
+        };
+
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateSlider();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            const visibleCards = getVisibleCardsCount();
+            const maxIndex = cards.length - visibleCards;
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+                updateSlider();
+            }
+        });
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                updateSlider();
+            });
+        });
+
+        // Touch Swipe Gestures
+        let startX = 0;
+        let diffX = 0;
+        let isDragging = false;
+
+        track.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            isDragging = true;
+            track.style.transition = 'none';
+        }, { passive: true });
+
+        track.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            const currentX = e.touches[0].clientX;
+            diffX = currentX - startX;
+            
+            const cardWidth = cards[0].offsetWidth;
+            const gap = parseFloat(window.getComputedStyle(track).gap) || 32;
+            const step = cardWidth + gap;
+            const currentTranslate = -currentIndex * step;
+            
+            let translate = currentTranslate + diffX;
+            const visibleCards = getVisibleCardsCount();
+            const maxIndex = cards.length - visibleCards;
+            
+            if (currentIndex === 0 && diffX > 0) {
+                translate = diffX * 0.3;
+            } else if (currentIndex === maxIndex && diffX < 0) {
+                translate = currentTranslate + diffX * 0.3;
+            }
+            
+            track.style.transform = `translateX(${translate}px)`;
+        }, { passive: true });
+
+        track.addEventListener('touchend', () => {
+            if (!isDragging) return;
+            isDragging = false;
+            track.style.transition = 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
+            
+            const cardWidth = cards[0].offsetWidth;
+            const gap = parseFloat(window.getComputedStyle(track).gap) || 32;
+            const step = cardWidth + gap;
+            const threshold = step * 0.2;
+
+            const visibleCards = getVisibleCardsCount();
+            const maxIndex = cards.length - visibleCards;
+
+            if (diffX < -threshold && currentIndex < maxIndex) {
+                currentIndex++;
+            } else if (diffX > threshold && currentIndex > 0) {
+                currentIndex--;
+            }
+            
+            diffX = 0;
+            updateSlider();
+        });
+
+        window.addEventListener('resize', updateSlider);
+        
+        // Initial setup update after DOM settles
+        setTimeout(updateSlider, 100);
+    }
 });
