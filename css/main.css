@@ -2176,10 +2176,32 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
         grid-template-columns: 1fr;
     }
     
-    .featured-work-grid,
     .work-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
+    }
+    
+    .featured-work-grid {
+        display: flex !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 1.25rem !important;
+        padding: 0.5rem 0.25rem 1.5rem 0.25rem !important;
+        margin: 0 -1.25rem 2rem -1.25rem !important;
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch !important;
+    }
+    
+    .featured-work-grid::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .featured-work-grid .featured-work-card {
+        flex: 0 0 82% !important;
+        scroll-snap-align: start !important;
+        margin: 0 !important;
     }
     
     .work-info,
