@@ -1743,12 +1743,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* Panel card under badge flow displaying selection details */
 .team-details-card {
-    background-color: var(--color-white);
-    border: 1px solid var(--border-color);
+    background-color: #081527;
+    border: 1px solid rgba(0, 196, 179, 0.2);
     border-radius: var(--radius-lg);
     padding: 3rem;
     margin-top: 3rem;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 196, 179, 0.05);
     display: flex;
     gap: 3rem;
     align-items: center;
@@ -1759,7 +1759,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     width: 96px;
     height: 96px;
     border-radius: var(--radius-circle);
-    background-color: var(--color-mist);
+    background-color: rgba(0, 196, 179, 0.12);
     color: var(--color-teal);
     font-family: var(--font-heading);
     font-weight: 700;
@@ -1786,6 +1786,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .team-details-info h3 {
     font-size: 1.85rem;
+    color: #ffffff;
     margin-bottom: 0.25rem;
 }
 
@@ -1800,7 +1801,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .team-details-info p {
     font-size: 1.05rem;
-    color: var(--color-slate);
+    color: rgba(255, 255, 255, 0.7);
     line-height: 1.6;
 }
 
@@ -1815,11 +1816,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .contact-card {
-    background-color: var(--color-white);
-    border: 1px solid var(--border-color);
+    background-color: #081527;
+    border: 1px solid rgba(0, 196, 179, 0.2);
     border-radius: var(--radius-lg);
     padding: 3rem 2.5rem;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 196, 179, 0.05);
 }
 
 .contact-form {
@@ -1837,7 +1838,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .form-group label {
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--color-navy-ink);
+    color: #ffffff;
 }
 
 .form-control {
@@ -1846,15 +1847,20 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     width: 100%;
     padding: 0.85rem 1rem;
     border-radius: var(--radius-md);
-    border: 1px solid var(--border-color);
-    background-color: var(--color-paper);
-    color: var(--color-navy-ink);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
     transition: var(--transition);
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.4);
 }
 
 .form-control:focus {
     border-color: var(--color-teal);
-    background-color: var(--color-white);
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
     outline: none;
 }
 
@@ -1865,13 +1871,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .info-card {
-    background-color: var(--color-mist);
-    border: 1px solid var(--border-color);
+    background-color: #081527;
+    border: 1px solid rgba(0, 196, 179, 0.2);
     border-radius: var(--radius-lg);
     padding: 2.25rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 196, 179, 0.05);
 }
 
 .info-item {
@@ -1884,33 +1891,34 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     width: 48px;
     height: 48px;
     border-radius: var(--radius-circle);
-    background-color: var(--color-white);
+    background-color: rgba(0, 196, 179, 0.12);
     color: var(--color-teal);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 0 10px rgba(0, 196, 179, 0.15);
 }
 
 .info-content h4 {
     font-size: 0.95rem;
-    color: var(--color-slate);
+    color: rgba(255, 255, 255, 0.5);
     margin-bottom: 0.15rem;
 }
 
 .info-content p {
     font-size: 1.05rem;
     font-weight: 600;
-    color: var(--color-navy-ink);
+    color: #ffffff;
 }
 
 .map-mock-card {
-    background-color: var(--color-white);
-    border: 1px solid var(--border-color);
+    background-color: #081527;
+    border: 1px solid rgba(0, 196, 179, 0.2);
     border-radius: var(--radius-lg);
     padding: 1.5rem;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 196, 179, 0.05);
     text-align: center;
+    color: #ffffff;
 }
 
 .map-placeholder {
@@ -2615,20 +2623,21 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .service-page-card {
-    background: var(--color-white);
-    border: 1px solid var(--border-color);
+    background: #081527;
+    border: 1px solid rgba(0, 196, 179, 0.2);
     border-radius: var(--radius-lg);
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 196, 179, 0.05);
     transition: var(--transition);
+    color: #ffffff;
 }
 
 .service-page-card:hover {
     transform: translateY(-8px);
-    box-shadow: var(--shadow-lg), 0 0 20px rgba(0, 196, 179, 0.1);
-    border-color: rgba(0, 196, 179, 0.25);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 196, 179, 0.2);
+    border-color: rgba(0, 196, 179, 0.5);
 }
 
 .service-page-image-box {
@@ -2662,12 +2671,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .service-page-content h3 {
     font-size: 1.6rem;
-    color: var(--color-navy-ink);
+    color: #ffffff;
     margin: 0.5rem 0 1rem;
 }
 
 .service-page-content p {
-    color: var(--color-slate);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 0.98rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
@@ -2688,7 +2697,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     align-items: flex-start;
     gap: 0.75rem;
     font-size: 0.95rem;
-    color: var(--color-navy-ink);
+    color: rgba(255, 255, 255, 0.85);
     line-height: 1.4;
 }
 
@@ -2716,7 +2725,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* Dark mode overrides for cards */
 .dark-theme .service-page-card {
-    background: var(--color-white);
+    background: #081527;
 }
 
 /* Mobile & Tablet Overrides */
