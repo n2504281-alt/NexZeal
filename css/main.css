@@ -1306,6 +1306,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     margin-bottom: 3.5rem;
 }
 
+.featured-work-controls {
+    display: none;
+}
+
 .featured-work-card {
     background-color: var(--color-paper);
     border: 1px solid var(--border-color);
@@ -2202,6 +2206,37 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
         flex: 0 0 82% !important;
         scroll-snap-align: start !important;
         margin: 0 !important;
+    }
+
+    .featured-work-controls {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .work-slider-dots {
+        display: flex;
+        gap: 0.6rem;
+        align-items: center;
+    }
+    
+    .work-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.2);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .work-dot.active {
+        width: 20px;
+        border-radius: 4px;
+        background-color: #00c4b3;
+        box-shadow: 0 0 8px rgba(0, 196, 179, 0.4);
     }
     
     .work-info,

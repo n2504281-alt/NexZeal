@@ -6,7 +6,7 @@
     <title>NexZeal Technologies — Software Built by Builders</title>
     <meta name="description" content="A hands-on software development studio building high-performance websites, applications, and SEO systems. Since 2020.">
     <!-- CSS Link -->
-    <link rel="stylesheet" href="css/main.css?v=1.1.6">
+    <link rel="stylesheet" href="css/main.css?v=1.1.7">
     <script>
         if (localStorage.getItem('theme') === 'dark') {
             document.documentElement.classList.add('dark-theme');
@@ -496,10 +496,30 @@
                             </svg>
                         </a>
                     </div>
-                </div>
             </div>
 
-            <div style="text-align: center;">
+            <!-- Featured Work Mobile Slider Controls -->
+            <div class="featured-work-controls">
+                <button class="slider-btn work-prev-btn" aria-label="Previous Project" disabled>
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                </button>
+                <div class="work-slider-dots">
+                    <span class="work-dot active"></span>
+                    <span class="work-dot"></span>
+                    <span class="work-dot"></span>
+                </div>
+                <button class="slider-btn work-next-btn" aria-label="Next Project">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <div style="text-align: center; margin-top: 1.5rem;">
                 <a href="work.html" class="btn btn-secondary">
                     See All Work
                     <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -668,6 +688,6 @@
     </footer>
 
     <!-- Script File -->
-    <script src="js/main.js?v=1.1.6"></script>
+    <script src="js/main.js?v=1.1.7"></script>
 </body>
 </html>

@@ -404,4 +404,57 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         setTimeout(typeLoop, 1500);
     }
+
+    // Featured Work mobile horizontal scroll controls
+    const workGrid = document.querySelector('.featured-work-grid');
+    const workPrev = document.querySelector('.work-prev-btn');
+    const workNext = document.querySelector('.work-next-btn');
+    const workDots = document.querySelectorAll('.work-dot');
+    const workCards = document.querySelectorAll('.featured-work-card');
+
+    if (workGrid && workPrev && workNext && workDots.length > 0) {
+        const updateWorkControls = () => {
+            const scrollLeft = workGrid.scrollLeft;
+            const maxScroll = workGrid.scrollWidth - workGrid.clientWidth;
+            
+            // Disable buttons if at boundary
+            workPrev.disabled = scrollLeft <= 10;
+            workNext.disabled = scrollLeft >= maxScroll - 10;
+            
+            // Update active dot based on scroll position
+            if (workCards.length > 0) {
+                const cardWidth = workCards[0].offsetWidth + parseFloat(window.getComputedStyle(workGrid).gap || 0);
+                const activeIndex = Math.round(scrollLeft / cardWidth);
+                workDots.forEach((dot, idx) => {
+                    dot.classList.toggle('active', idx === activeIndex);
+                });
+            }
+        };
+
+        // Scroll listener to update dots/buttons dynamically when swiping
+        workGrid.addEventListener('scroll', updateWorkControls);
+        window.addEventListener('resize', updateWorkControls);
+
+        // Click listeners on buttons
+        workPrev.addEventListener('click', () => {
+            const cardWidth = workCards[0].offsetWidth + parseFloat(window.getComputedStyle(workGrid).gap || 0);
+            workGrid.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+        });
+
+        workNext.addEventListener('click', () => {
+            const cardWidth = workCards[0].offsetWidth + parseFloat(window.getComputedStyle(workGrid).gap || 0);
+            workGrid.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        });
+
+        // Click listeners on dots
+        workDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                const cardWidth = workCards[0].offsetWidth + parseFloat(window.getComputedStyle(workGrid).gap || 0);
+                workGrid.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
+            });
+        });
+
+        // Initial setup
+        setTimeout(updateWorkControls, 300);
+    }
 });
