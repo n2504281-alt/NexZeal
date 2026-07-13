@@ -373,4 +373,35 @@ document.addEventListener('DOMContentLoaded', () => {
         // Initial setup update after DOM settles
         setTimeout(updateSlider, 100);
     }
+
+    // Hero Title Loop Typing Effect
+    const typingTarget = document.querySelector('.hero-typing-target');
+    if (typingTarget) {
+        const fullText = "Actually Work";
+        let isDeleting = false;
+        let charIndex = fullText.length;
+        
+        const typeLoop = () => {
+            if (isDeleting) {
+                charIndex--;
+                typingTarget.textContent = fullText.substring(0, charIndex);
+                if (charIndex === 0) {
+                    isDeleting = false;
+                    setTimeout(typeLoop, 400);
+                } else {
+                    setTimeout(typeLoop, 60);
+                }
+            } else {
+                charIndex++;
+                typingTarget.textContent = fullText.substring(0, charIndex);
+                if (charIndex === fullText.length) {
+                    isDeleting = true;
+                    setTimeout(typeLoop, 2500);
+                } else {
+                    setTimeout(typeLoop, 100);
+                }
+            }
+        };
+        setTimeout(typeLoop, 1500);
+    }
 });

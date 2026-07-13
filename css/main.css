@@ -233,6 +233,20 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     transform: translateY(0);
 }
 
+/* Typing cursor animation */
+.typing-cursor {
+    color: var(--color-teal);
+    margin-left: 2px;
+    animation: blink-cursor 0.8s step-end infinite;
+    font-weight: 300;
+    display: inline-block;
+}
+
+@keyframes blink-cursor {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
 /* Hero entrance orchestrations */
 .hero-animate-title {
     opacity: 0;
