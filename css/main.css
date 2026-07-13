@@ -158,15 +158,15 @@ img {
 }
 
 .btn-primary {
-    background: var(--brand-gradient);
-    color: #ffffff;
-    border: none;
-    box-shadow: 0 4px 15px rgba(21, 79, 147, 0.2);
+    background: #081527;
+    color: #00c4b3;
+    border: 2px solid #00c4b3;
+    box-shadow: 0 4px 15px rgba(0, 196, 179, 0.15);
 }
 
 .btn-primary:hover, .btn-primary:focus {
-    background: linear-gradient(135deg, var(--color-brand-teal) 0%, var(--color-brand-blue) 100%);
-    color: #ffffff;
+    background: #00c4b3;
+    color: #081527;
     box-shadow: 0 8px 25px rgba(0, 196, 179, 0.35);
     transform: translateY(-2px);
     outline: none;
@@ -174,23 +174,24 @@ img {
 
 .btn-secondary {
     background-color: transparent;
-    border-color: var(--color-navy-ink);
-    color: var(--color-navy-ink);
+    border-color: #00c4b3;
+    color: #00c4b3;
 }
 
 .btn-secondary:hover, .btn-secondary:focus {
-    background-color: rgba(11, 30, 61, 0.05);
+    background-color: #00c4b3;
+    color: #081527;
     outline: none;
 }
 
 .btn-ghost {
     background-color: transparent;
-    color: var(--color-navy-ink);
+    color: #00c4b3;
     border-color: transparent;
 }
 
 .btn-ghost:hover, .btn-ghost:focus {
-    color: var(--color-teal);
+    color: #00e5d0;
     outline: none;
 }
 
@@ -670,9 +671,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .trusted-card {
-    background: var(--brand-gradient);
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: #081527;
+    color: #00c4b3;
+    border: 2px solid rgba(0, 196, 179, 0.3);
     border-radius: var(--radius-md);
     padding: 1.5rem;
     font-family: var(--font-heading);
@@ -680,7 +681,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     font-size: 1.2rem;
     text-align: center;
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease, color 0.3s ease;
-    box-shadow: 0 6px 20px rgba(21, 79, 147, 0.15);
+    box-shadow: 0 6px 20px rgba(0, 196, 179, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -688,23 +689,23 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .trusted-card:hover {
     transform: translateY(-8px) scale(1.03);
-    background: linear-gradient(135deg, var(--color-brand-teal) 0%, var(--color-brand-blue) 100%);
-    border-color: var(--color-white);
-    color: var(--color-white);
-    box-shadow: 0 20px 35px rgba(0, 196, 179, 0.25);
+    background: #00c4b3;
+    border-color: #00c4b3;
+    color: #081527;
+    box-shadow: 0 20px 35px rgba(0, 196, 179, 0.3);
 }
 
 .dark-theme .trusted-card {
-    background: var(--brand-gradient);
-    color: #ffffff;
-    border-color: rgba(255, 255, 255, 0.15);
+    background: #081527;
+    color: #00c4b3;
+    border-color: rgba(0, 196, 179, 0.3);
 }
 
 .dark-theme .trusted-card:hover {
-    background: linear-gradient(135deg, var(--color-brand-teal) 0%, var(--color-brand-blue) 100%);
-    border-color: #ffffff;
-    color: #ffffff;
-    box-shadow: 0 20px 35px rgba(0, 196, 179, 0.4);
+    background: #00c4b3;
+    border-color: #00c4b3;
+    color: #081527;
+    box-shadow: 0 20px 35px rgba(0, 196, 179, 0.45);
 }
 
 
@@ -723,25 +724,24 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .feature-card {
-    background: var(--brand-gradient);
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-bottom: 4px solid rgba(0, 196, 179, 0.4);
+    background: #081527;
+    color: #00c4b3;
+    border: 1px solid rgba(0, 196, 179, 0.2);
+    border-bottom: 4px solid #00c4b3;
     border-radius: var(--radius-lg);
     padding: 2.25rem 2rem;
-    box-shadow: 0 15px 35px rgba(11, 30, 61, 0.3), 0 5px 15px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 196, 179, 0.08);
     transition: var(--transition);
     text-align: center;
 }
 
 .feature-card:hover {
     transform: translateY(-8px);
-    border-color: rgba(255, 255, 255, 0.35);
-    border-bottom-color: var(--color-teal-bright);
+    border-color: rgba(0, 196, 179, 0.6);
+    border-bottom-color: #00e5d0;
     box-shadow: 
-        0 20px 40px rgba(11, 30, 61, 0.4), 
-        0 15px 25px rgba(0, 196, 179, 0.2), 
-        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        0 20px 40px rgba(0, 0, 0, 0.4), 
+        0 0 25px rgba(0, 196, 179, 0.2);
 }
 
 .feature-icon-box {
@@ -816,25 +816,25 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .feature-card h3 {
     font-size: 1.25rem;
     margin-bottom: 0.75rem;
-    color: #ffffff;
+    color: #00c4b3;
     transition: var(--transition);
 }
 
 .feature-card p {
     font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(0, 196, 179, 0.75);
     line-height: 1.5;
     transition: var(--transition);
 }
 
 /* Clean, premium text animation: slide up slightly and brighten */
 .feature-card:hover h3 {
-    color: var(--color-teal-bright);
+    color: #00e5d0;
     transform: translateY(-3px);
 }
 
 .feature-card:hover p {
-    color: #ffffff;
+    color: #00c4b3;
     transform: translateY(-3px);
 }
 
@@ -923,12 +923,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .review-card {
-    background: var(--brand-gradient);
+    background: #081527;
     color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(0, 196, 179, 0.2);
     border-radius: var(--radius-lg);
     padding: 2.5rem 2rem;
-    box-shadow: 0 15px 35px rgba(11, 30, 61, 0.3), 0 5px 15px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 196, 179, 0.05);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -939,13 +939,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .review-card:hover {
     transform: translateY(-12px) rotateX(4deg) rotateY(-3deg) scale(1.01);
-    border-color: rgba(255, 255, 255, 0.45);
-    box-shadow: 0 20px 40px rgba(11, 30, 61, 0.4), 0 15px 25px rgba(0, 196, 179, 0.25), 0 0 30px rgba(21, 79, 147, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    border-color: rgba(0, 196, 179, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 196, 179, 0.2);
 }
 
 .review-quote {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.85);
     margin-bottom: 1.75rem;
     line-height: 1.6;
     font-style: italic;
@@ -971,15 +971,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     width: 48px;
     height: 48px;
     border-radius: var(--radius-circle);
-    background-color: rgba(255, 255, 255, 0.15);
-    color: #ffffff;
+    background-color: rgba(0, 196, 179, 0.15);
+    color: #00c4b3;
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid rgba(255, 255, 255, 0.4);
+    border: 2px solid rgba(0, 196, 179, 0.4);
     overflow: hidden;
 }
 
@@ -992,12 +992,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .author-meta h4 {
     font-size: 1rem;
     margin-bottom: 0.15rem;
-    color: #ffffff;
+    color: #00c4b3;
 }
 
 .author-meta p {
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(0, 196, 179, 0.65);
 }
 
 /* ==========================================================================
@@ -1024,9 +1024,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .service-card {
     flex: 0 0 calc(33.333% - 1.333rem);
-    background: var(--brand-gradient);
+    background: #081527;
     color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(0, 196, 179, 0.2);
     border-radius: var(--radius-lg);
     padding: 2.5rem 2rem;
     position: relative;
@@ -1035,19 +1035,17 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     flex-direction: column;
     align-items: flex-start;
     transition: var(--transition);
-    box-shadow: 0 15px 35px rgba(11, 30, 61, 0.3), 0 5px 15px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 196, 179, 0.05);
     transform-style: preserve-3d;
     perspective: 1000px;
 }
 
 .service-card:hover {
     transform: translateY(-12px) rotateX(4deg) rotateY(-3deg) scale(1.01);
-    border-color: rgba(255, 255, 255, 0.45);
+    border-color: rgba(0, 196, 179, 0.5);
     box-shadow: 
-        0 20px 40px rgba(11, 30, 61, 0.4), 
-        0 15px 25px rgba(0, 196, 179, 0.25), 
-        0 0 30px rgba(21, 79, 147, 0.25),
-        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        0 20px 40px rgba(0, 0, 0, 0.4), 
+        0 0 30px rgba(0, 196, 179, 0.2);
 }
 
 .service-illustration-wrapper {
@@ -1056,12 +1054,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.12);
+    background-color: rgba(0, 196, 179, 0.06);
     border-radius: var(--radius-md);
     margin-bottom: 1.75rem;
     overflow: hidden;
     transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(0, 196, 179, 0.12);
 }
 
 .service-illustration-wrapper .service-img {
@@ -1072,7 +1070,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .service-card:hover .service-illustration-wrapper {
-    border-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(0, 196, 179, 0.4);
     transform: translateZ(30px);
 }
 
@@ -1083,13 +1081,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .service-card h3 {
     font-size: 1.45rem;
     margin-bottom: 0.85rem;
-    color: #ffffff;
+    color: #00c4b3;
     transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .service-card p {
     font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.75);
     line-height: 1.6;
     margin-bottom: 2rem;
     transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -1099,8 +1097,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     width: 40px;
     height: 40px;
     border-radius: var(--radius-circle);
-    background-color: #ffffff;
-    color: var(--color-brand-blue);
+    background-color: rgba(0, 196, 179, 0.15);
+    color: #00c4b3;
+    border: 1px solid rgba(0, 196, 179, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1110,8 +1109,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .service-card:hover .service-card-arrow {
-    background-color: var(--color-brand-teal);
-    color: #ffffff;
+    background-color: #00c4b3;
+    color: #081527;
     transform: translateZ(25px);
 }
 
@@ -1133,32 +1132,32 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .slider-btn {
-    width: 52px;
-    height: 52px;
+    width: 48px;
+    height: 48px;
     border-radius: var(--radius-circle);
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 2px solid var(--color-teal);
-    color: var(--color-teal);
+    background-color: #081527;
+    border: 2px solid #00c4b3;
+    color: #00c4b3;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-    box-shadow: 0 4px 12px rgba(21, 79, 147, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 196, 179, 0.1);
 }
 
 .slider-btn:hover:not(:disabled) {
-    background: var(--brand-gradient);
-    color: #ffffff;
-    border-color: transparent;
+    background: #00c4b3;
+    color: #081527;
+    border-color: #00c4b3;
     transform: scale(1.08);
-    box-shadow: 0 8px 20px rgba(0, 196, 179, 0.35);
+    box-shadow: 0 8px 20px rgba(0, 196, 179, 0.3);
 }
 
 .slider-btn:disabled {
-    opacity: 0.25;
-    border-color: rgba(255, 255, 255, 0.15);
-    color: rgba(255, 255, 255, 0.2);
+    opacity: 0.2;
+    border-color: rgba(0, 196, 179, 0.2);
+    color: rgba(0, 196, 179, 0.2);
     cursor: not-allowed;
 }
 
@@ -1874,12 +1873,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     width: 64px;
     height: 64px;
     border-radius: var(--radius-circle);
-    background-color: rgba(255, 255, 255, 0.08);
-    color: var(--color-brand-teal);
+    background-color: rgba(0, 196, 179, 0.1);
+    color: #00c4b3;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(0, 196, 179, 0.3);
 }
 
 .cta-content h2 {
@@ -1894,16 +1893,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .cta-box .btn {
-    background: var(--brand-gradient);
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: #081527;
+    color: #00c4b3;
+    border: 2px solid #00c4b3;
     flex-shrink: 0;
-    box-shadow: 0 4px 15px rgba(21, 79, 147, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 196, 179, 0.15);
 }
 
 .cta-box .btn:hover {
-    background: linear-gradient(135deg, var(--color-brand-teal) 0%, var(--color-brand-blue) 100%);
-    color: #ffffff;
+    background: #00c4b3;
+    color: #081527;
     box-shadow: 0 8px 25px rgba(0, 196, 179, 0.35);
 }
 
