@@ -35,11 +35,41 @@ document.addEventListener('DOMContentLoaded', () => {
                 child.style.transitionDelay = `${index * 90}ms`;
             });
         });
+
+        // Global Section-level Scroll Reveal Observer
+        const sectionsToAnimate = document.querySelectorAll('section, main, header.hero, footer.footer');
+        const sectionRevealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('section-revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.05,
+            rootMargin: isMobile ? '0px 0px -20px 0px' : '0px 0px -80px 0px'
+        });
+
+        sectionsToAnimate.forEach(sec => {
+            const rect = sec.getBoundingClientRect();
+            // Reveal immediately on page load if the section is already in or near viewport
+            if (rect.top < window.innerHeight) {
+                sec.classList.add('section-reveal', 'section-revealed');
+            } else {
+                sec.classList.add('section-reveal');
+                sectionRevealObserver.observe(sec);
+            }
+        });
     } else {
         // Reduced motion: instantly reveal all elements
         const revealElements = document.querySelectorAll('.reveal');
         revealElements.forEach(el => {
             el.classList.add('revealed');
+        });
+
+        const sectionsToAnimate = document.querySelectorAll('section, main, header.hero, footer.footer');
+        sectionsToAnimate.forEach(sec => {
+            sec.classList.add('section-reveal', 'section-revealed');
         });
     }
 

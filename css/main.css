@@ -214,6 +214,18 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     transform: translateY(0);
 }
 
+/* Page Section Scroll Reveal Animations */
+.section-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.section-reveal.section-revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Hero entrance orchestrations */
 .hero-animate-title {
     opacity: 0;
@@ -259,7 +271,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* Reduced Motion Override */
 @media (prefers-reduced-motion: reduce) {
-    .reveal, .hero-animate-title, .hero-animate-text, .hero-animate-actions, .hero-animate-terminal {
+    .reveal, .section-reveal, .hero-animate-title, .hero-animate-text, .hero-animate-actions, .hero-animate-terminal {
         opacity: 1 !important;
         transform: none !important;
         animation: none !important;
