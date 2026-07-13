@@ -217,8 +217,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* Page Section Scroll Reveal Animations */
 .section-reveal {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(15px);
+    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .section-reveal.section-revealed {

@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }, {
-            threshold: 0.05,
-            rootMargin: isMobile ? '0px 0px -20px 0px' : '0px 0px -80px 0px'
+            threshold: 0,
+            rootMargin: isMobile ? '0px 0px 80px 0px' : '0px 0px 150px 0px'
         });
 
         sectionsToAnimate.forEach(sec => {
