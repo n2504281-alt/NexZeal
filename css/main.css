@@ -2316,10 +2316,212 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     .feature-card:active,
     .why-choose-item:active,
     .service-card:active,
+    .service-page-card:active,
     .work-card:active,
     .featured-work-card:active {
         transform: scale(0.97) translateY(-4px) !important;
         transition: transform 0.15s ease !important;
     }
 }
+
+/* ==========================================================================
+   SERVICES PAGE 2-COLUMN GRID SYSTEM
+   ========================================================================== */
+.services-page-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+}
+
+.service-page-card {
+    background: var(--color-white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.service-page-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg), 0 0 20px rgba(0, 196, 179, 0.1);
+    border-color: rgba(0, 196, 179, 0.25);
+}
+
+.service-page-image-box {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    position: relative;
+}
+
+.service-page-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-page-card:hover .service-page-img {
+    transform: scale(1.05);
+}
+
+.service-page-content {
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.service-page-content .section-eyebrow {
+    margin-bottom: 0.5rem;
+}
+
+.service-page-content h3 {
+    font-size: 1.6rem;
+    color: var(--color-navy-ink);
+    margin: 0.5rem 0 1rem;
+}
+
+.service-page-content p {
+    color: var(--color-slate);
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.service-page-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.service-page-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--color-navy-ink);
+    line-height: 1.4;
+}
+
+.service-page-list li svg {
+    color: var(--color-teal);
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+/* 5th Card balance alignment spanning 2 columns on desktop */
+.service-page-card:nth-child(5) {
+    grid-column: span 2;
+    flex-direction: row;
+}
+
+.service-page-card:nth-child(5) .service-page-image-box {
+    width: 50%;
+    height: auto;
+}
+
+.service-page-card:nth-child(5) .service-page-content {
+    width: 50%;
+    padding: 3rem 2.5rem;
+}
+
+/* Dark mode overrides for cards */
+.dark-theme .service-page-card {
+    background: var(--color-white);
+}
+
+/* Mobile & Tablet Overrides */
+@media (max-width: 1024px) {
+    .services-page-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.75rem;
+    }
+    
+    .service-page-card:nth-child(5) {
+        flex-direction: column;
+    }
+    
+    .service-page-card:nth-child(5) .service-page-image-box {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .service-page-card:nth-child(5) .service-page-content {
+        width: 100%;
+        padding: 2.5rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-page-card:nth-child(5) {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 580px) {
+    .services-page-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .service-page-image-box {
+        height: 140px;
+    }
+    
+    .service-page-content {
+        padding: 1.25rem 1rem;
+    }
+    
+    .service-page-content h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .service-page-content p {
+        font-size: 0.82rem;
+        line-height: 1.4;
+        margin-bottom: 1rem;
+    }
+    
+    .service-page-list {
+        gap: 0.5rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .service-page-list li {
+        font-size: 0.78rem;
+        gap: 0.5rem;
+    }
+    
+    .service-page-list li svg {
+        width: 12px;
+        height: 12px;
+        margin-top: 2px;
+    }
+    
+    .service-page-content .btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .service-page-card:nth-child(5) .service-page-image-box {
+        height: 140px;
+    }
+    
+    .service-page-card:nth-child(5) .service-page-content {
+        padding: 1.25rem 1rem;
+    }
+}
+
 
