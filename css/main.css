@@ -173,14 +173,17 @@ img {
 }
 
 .btn-secondary {
-    background-color: transparent;
-    border-color: #00c4b3;
+    background-color: #081527;
+    border: 2px solid #00c4b3;
     color: #00c4b3;
+    box-shadow: 0 4px 15px rgba(0, 196, 179, 0.15);
 }
 
 .btn-secondary:hover, .btn-secondary:focus {
     background-color: #00c4b3;
     color: #081527;
+    box-shadow: 0 8px 25px rgba(0, 196, 179, 0.35);
+    transform: translateY(-2px);
     outline: none;
 }
 
