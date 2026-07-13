@@ -1377,29 +1377,29 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .featured-work-card {
-    background-color: var(--color-paper);
-    border: 1px solid var(--border-color);
+    background-color: #081527;
+    border: 1px solid rgba(0, 196, 179, 0.2);
     border-radius: var(--radius-lg);
     overflow: hidden;
     transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, border-color 0.3s ease;
-    box-shadow: 0 15px 35px rgba(11, 30, 61, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), 0 5px 15px rgba(0, 196, 179, 0.05);
     transform-style: preserve-3d;
     perspective: 1000px;
+    color: #ffffff;
 }
 
 .featured-work-card:hover {
     transform: translateY(-12px) rotateX(4deg) rotateY(-3deg) scale(1.01);
-    border-color: rgba(23, 191, 174, 0.45);
+    border-color: rgba(0, 196, 179, 0.5);
     box-shadow: 
-        0 20px 40px rgba(11, 30, 61, 0.25), 
-        0 15px 25px rgba(23, 191, 174, 0.15), 
-        0 0 30px rgba(21, 79, 147, 0.15),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        0 20px 40px rgba(0, 0, 0, 0.45), 
+        0 15px 25px rgba(0, 196, 179, 0.2), 
+        0 0 30px rgba(0, 196, 179, 0.15);
 }
 
 .featured-work-thumb {
     height: 180px;
-    background-color: var(--color-mist);
+    background-color: rgba(0, 196, 179, 0.08);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1445,19 +1445,20 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .featured-work-title {
     font-size: 1.25rem;
+    color: #ffffff;
     margin-bottom: 0.5rem;
 }
 
 .featured-work-desc {
     font-size: 0.9rem;
-    color: var(--color-slate);
+    color: rgba(255, 255, 255, 0.7);
     margin-bottom: 1.25rem;
 }
 
 .featured-work-link {
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--color-navy-ink);
+    color: #ffffff;
     display: inline-flex;
     align-items: center;
     gap: 0.25rem;
@@ -1481,15 +1482,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .why-choose-item {
-    background-color: var(--color-white);
-    border: 1px solid var(--border-color);
+    background-color: #081527;
+    border: 1px solid rgba(0, 196, 179, 0.2);
     border-radius: var(--radius-lg);
     padding: 2.25rem 2rem;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 196, 179, 0.05);
     transition: var(--transition);
     display: flex;
     align-items: flex-start;
     gap: 1.25rem;
+    color: #ffffff;
     
     /* 3D perspective setup */
     transform-style: preserve-3d;
@@ -1498,15 +1500,17 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .why-choose-item:hover {
     transform: translateY(-8px) rotateX(4deg) rotateY(-2deg);
-    box-shadow: 0 15px 35px rgba(11, 30, 61, 0.1), 0 5px 15px rgba(0, 196, 179, 0.06);
-    border-color: rgba(0, 196, 179, 0.35);
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.4), 
+        0 0 30px rgba(0, 196, 179, 0.2);
+    border-color: rgba(0, 196, 179, 0.5);
 }
 
 .why-choose-icon {
     width: 36px;
     height: 36px;
     border-radius: var(--radius-circle);
-    background-color: var(--color-mist);
+    background-color: rgba(0, 196, 179, 0.12);
     color: var(--color-teal);
     display: flex;
     align-items: center;
@@ -1522,6 +1526,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .why-choose-info h3 {
+    color: #ffffff;
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
     transition: var(--transition);
@@ -1533,7 +1538,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .why-choose-info p {
     font-size: 0.95rem;
-    color: var(--color-slate);
+    color: rgba(255, 255, 255, 0.7);
     line-height: 1.5;
 }
 
@@ -1547,30 +1552,34 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .work-card {
-    background-color: var(--color-white);
-    border: 1px solid var(--border-color);
+    background-color: #081527;
+    border: 1px solid rgba(0, 196, 179, 0.2);
     border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 196, 179, 0.05);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, border-color 0.3s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    color: #ffffff;
 }
 
 .work-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lg);
-    border-color: rgba(23, 191, 174, 0.2);
+    transform: translateY(-10px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45), 0 0 30px rgba(0, 196, 179, 0.2);
+    border-color: rgba(0, 196, 179, 0.5);
 }
 
 .work-thumbnail {
     width: 100%;
     aspect-ratio: 16/10;
-    background-color: var(--color-mist);
+    background-color: rgba(0, 196, 179, 0.08);
     overflow: hidden;
     position: relative;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .work-thumbnail svg {
@@ -1584,6 +1593,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.work-card:hover .work-thumbnail {
+    transform: translateZ(20px);
+}
+
+.work-card:hover .work-info {
+    transform: translateZ(12px);
 }
 
 .work-tag {
@@ -1597,12 +1615,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .work-title {
     font-size: 1.45rem;
+    color: #ffffff;
     margin-bottom: 0.75rem;
 }
 
 .work-desc {
     font-size: 0.95rem;
-    color: var(--color-slate);
+    color: rgba(255, 255, 255, 0.7);
     line-height: 1.5;
     margin-bottom: 1.75rem;
 }
@@ -1610,7 +1629,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .work-link {
     font-weight: 600;
     font-size: 0.9rem;
-    color: var(--color-navy-ink);
+    color: #ffffff;
     display: flex;
     align-items: center;
     gap: 0.5rem;
