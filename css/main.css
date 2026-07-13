@@ -217,12 +217,19 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* Page Section Scroll Reveal Animations */
 .section-reveal {
     opacity: 0;
+    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.section-reveal > * {
     transform: translateY(15px);
-    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .section-reveal.section-revealed {
     opacity: 1;
+}
+
+.section-reveal.section-revealed > * {
     transform: translateY(0);
 }
 
