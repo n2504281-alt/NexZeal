@@ -7,9 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     if (!prefersReduced) {
+        const isMobile = window.innerWidth <= 768;
         const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: isMobile ? 0.01 : 0.1,
+            rootMargin: isMobile ? '0px 0px -10px 0px' : '0px 0px -50px 0px'
         };
 
         const revealObserver = new IntersectionObserver((entries, observer) => {
@@ -221,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let currentIndex = 0;
         
         const getVisibleCardsCount = () => {
-            if (window.innerWidth <= 580) return 1;
+            if (window.innerWidth <= 580) return 2;
             if (window.innerWidth <= 1024) return 2;
             return 3;
         };

@@ -2023,6 +2023,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     .service-block-content {
         align-items: center;
     }
+
+    .service-block-list {
+        margin: 1.5rem auto 2rem;
+        width: fit-content;
+        text-align: left;
+        align-items: flex-start;
+    }
     
     .featured-work-grid {
         grid-template-columns: repeat(2, 1fr);
