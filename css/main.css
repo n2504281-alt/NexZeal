@@ -2260,6 +2260,28 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
         margin: 0 !important;
         padding: 0 !important;
     }
+
+    /* Process Step Badge Colors (Mobile Only) */
+    .process-step:nth-child(1) .process-num-badge {
+        background-color: #00c4b3;
+        border-color: #00c4b3;
+        color: #081527;
+    }
+    .process-step:nth-child(2) .process-num-badge {
+        background-color: #6366f1;
+        border-color: #6366f1;
+        color: #ffffff;
+    }
+    .process-step:nth-child(3) .process-num-badge {
+        background-color: #f59e0b;
+        border-color: #f59e0b;
+        color: #081527;
+    }
+    .process-step:nth-child(4) .process-num-badge {
+        background-color: #ec4899;
+        border-color: #ec4899;
+        color: #ffffff;
+    }
 }
 
 /* Theme Toggle Button Style */
