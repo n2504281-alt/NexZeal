@@ -1721,6 +1721,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .form-control {
     font-family: var(--font-body);
     font-size: 0.95rem;
+    width: 100%;
     padding: 0.85rem 1rem;
     border-radius: var(--radius-md);
     border: 1px solid var(--border-color);
@@ -2467,6 +2468,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 @media (max-width: 580px) {
+    .contact-card,
+    .info-card {
+        padding: 1.5rem 1.25rem;
+    }
+
     .services-page-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
