@@ -487,4 +487,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
     createScrollToTopButton();
+
+    // 8. Preloader Fade-out
+    const hidePreloader = () => {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+            preloader.classList.add('fade-out');
+            setTimeout(() => {
+                preloader.remove();
+            }, 600);
+        }
+    };
+
+    // Hide preloader when window fully loads
+    window.addEventListener('load', hidePreloader);
+
+    // Fallback: hide preloader after 2.5 seconds
+    setTimeout(hidePreloader, 2500);
 });

@@ -6,7 +6,7 @@
     <title>Our Work — NexZeal Technologies Portfolio</title>
     <meta name="description" content="Explore portfolio case studies and digital systems launched by NexZeal Technologies since 2020.">
     <!-- CSS Link -->
-    <link rel="stylesheet" href="css/main.css?v=1.2.5">
+    <link rel="stylesheet" href="css/main.css?v=1.2.6">
     <script>
         if (localStorage.getItem('theme') === 'dark') {
             document.documentElement.classList.add('dark-theme');
@@ -14,6 +14,18 @@
     </script>
 </head>
 <body>
+    <!-- Preloader Overlay -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">
+                <svg viewBox="0 0 24 24" width="40" height="40" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="13 17 18 12 13 7"></polyline>
+                    <polyline points="6 17 11 12 6 7"></polyline>
+                </svg>
+            </div>
+            <div class="preloader-spinner"></div>
+        </div>
+    </div>
 
     <!-- ==========================================================================
        A. NAVBAR
@@ -233,6 +245,6 @@
     </footer>
 
     <!-- Script File -->
-    <script src="js/main.js?v=1.2.5"></script>
+    <script src="js/main.js?v=1.2.6"></script>
 </body>
 </html>
