@@ -620,8 +620,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    bottom: 7%;
-    left: 42%;
+    bottom: 9%;
+    left: 50%;
     right: auto;
     box-shadow: 0 12px 28px rgba(0, 196, 179, 0.2);
     z-index: 4;
