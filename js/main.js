@@ -169,11 +169,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         currentLineDiv = document.createElement('div');
                         currentLineDiv.className = 'console-line';
                         if (line.text.startsWith('$')) {
-                            currentLineDiv.style.color = 'var(--color-white)';
+                            currentLineDiv.style.color = '#ffffff';
                         } else if (line.text.startsWith('✓')) {
-                            currentLineDiv.style.color = 'var(--color-teal)';
+                            currentLineDiv.style.color = '#00c4b3';
                         } else {
-                            currentLineDiv.style.color = 'var(--color-teal-bright)';
+                            currentLineDiv.style.color = '#00e5d0';
                         }
                         consoleOutput.appendChild(currentLineDiv);
                     }
