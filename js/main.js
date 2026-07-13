@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Dynamic Stagger Setup for grids
-        const staggerContainers = document.querySelectorAll('.feature-grid, .reviews-grid, .services-grid, .process-grid, .featured-work-grid, .why-choose-grid, .trusted-logos');
+        const staggerContainers = document.querySelectorAll('.feature-grid, .reviews-grid, .services-grid, .process-grid, .featured-work-grid, .why-choose-grid, .trusted-logos, .work-grid');
         staggerContainers.forEach(container => {
             const children = container.querySelectorAll('.reveal');
             children.forEach((child, index) => {

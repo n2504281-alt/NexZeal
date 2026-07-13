@@ -975,7 +975,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, border-color 0.3s ease;
+    transition: var(--transition);
     box-shadow: 0 15px 35px rgba(11, 30, 61, 0.3), 0 5px 15px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.25);
     transform-style: preserve-3d;
     perspective: 1000px;
@@ -1140,8 +1140,25 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 @media (max-width: 580px) {
+    .services-track {
+        gap: 1rem;
+    }
     .service-card {
-        flex: 0 0 100%;
+        flex: 0 0 calc(50% - 0.5rem);
+        padding: 1.5rem 1rem;
+    }
+    .service-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+    .service-card p {
+        font-size: 0.82rem;
+        line-height: 1.4;
+        margin-bottom: 1rem;
+    }
+    .service-illustration-wrapper {
+        height: 80px;
+        margin-bottom: 1rem;
     }
     .slider-controls {
         margin-top: 2.5rem;
@@ -1203,7 +1220,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .service-block-list-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.75rem;
     font-size: 1rem;
     color: var(--color-navy-ink);
@@ -1212,6 +1229,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .service-block-list-item svg {
     color: var(--color-teal);
     flex-shrink: 0;
+    margin-top: 0.25rem;
 }
 
 /* ==========================================================================
@@ -1990,7 +2008,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     }
     
     .work-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
     
     .stats-grid {
@@ -1999,19 +2018,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     }
     
     .team-flow-wrapper {
-        flex-direction: column;
-        gap: 3rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: 2rem;
+        padding: 2rem 0;
     }
     
     .team-connecting-line {
-        top: 0;
-        bottom: 0;
-        left: 50%;
-        width: 2px;
-        height: 80%;
-        border-left: 2px dashed rgba(23, 191, 174, 0.4);
-        border-top: none;
-        transform: translateX(-50%);
+        display: none;
     }
     
     .team-details-card {
@@ -2077,15 +2092,42 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     }
     
     .services-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
     
     .trusted-logos {
         grid-template-columns: 1fr;
     }
     
-    .featured-work-grid {
-        grid-template-columns: 1fr;
+    .featured-work-grid,
+    .work-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .work-info,
+    .featured-work-info {
+        padding: 1.25rem 1rem !important;
+    }
+    
+    .work-title,
+    .featured-work-title {
+        font-size: 1.1rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .work-desc,
+    .featured-work-desc {
+        font-size: 0.82rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .work-link,
+    .featured-work-link {
+        font-weight: 600;
+        font-size: 0.8rem !important;
     }
     
     .stats-grid {
@@ -2226,3 +2268,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     border-color: #ffffff;
     box-shadow: 0 15px 35px rgba(0, 196, 179, 0.40), 0 0 20px rgba(0, 196, 179, 0.20);
 }
+
+/* Mobile Tactile Active/Touch Feedback Animations */
+@media (max-width: 1024px) {
+    .feature-card:active,
+    .why-choose-item:active,
+    .service-card:active,
+    .work-card:active,
+    .featured-work-card:active {
+        transform: scale(0.97) translateY(-4px) !important;
+        transition: transform 0.15s ease !important;
+    }
+}
+
