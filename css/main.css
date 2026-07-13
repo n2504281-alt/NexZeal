@@ -1312,18 +1312,34 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .why-choose-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem 4rem;
+    gap: 2.5rem 2rem;
 }
 
 .why-choose-item {
+    background-color: var(--color-white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2.25rem 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
     display: flex;
     align-items: flex-start;
     gap: 1.25rem;
+    
+    /* 3D perspective setup */
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.why-choose-item:hover {
+    transform: translateY(-8px) rotateX(4deg) rotateY(-2deg);
+    box-shadow: 0 15px 35px rgba(11, 30, 61, 0.1), 0 5px 15px rgba(0, 196, 179, 0.06);
+    border-color: rgba(0, 196, 179, 0.35);
 }
 
 .why-choose-icon {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
     border-radius: var(--radius-circle);
     background-color: var(--color-mist);
     color: var(--color-teal);
@@ -1331,11 +1347,23 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.why-choose-item:hover .why-choose-icon {
+    transform: translateZ(25px) scale(1.15);
+    background-color: var(--color-teal);
+    color: #ffffff;
 }
 
 .why-choose-info h3 {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
+    transition: var(--transition);
+}
+
+.why-choose-item:hover .why-choose-info h3 {
+    transform: translateZ(15px);
 }
 
 .why-choose-info p {
