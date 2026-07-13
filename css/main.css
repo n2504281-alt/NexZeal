@@ -2191,6 +2191,42 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
         gap: 1rem;
         text-align: center;
     }
+
+    /* Mobile-specific Hero Terminal Layout & Badge Fixes */
+    .hero-illustration-wrapper {
+        height: 420px !important;
+    }
+    
+    .floating-badge {
+        bottom: 5px !important;
+        right: auto !important;
+        left: 50% !important;
+        transform: translateX(-50%) translateZ(80px) scale(0.9) !important;
+    }
+
+    /* Container Padding & Grid Alignment Updates */
+    .container {
+        padding: 0 1.25rem !important;
+    }
+    
+    .contact-grid {
+        display: block !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .contact-card {
+        width: 100% !important;
+        margin-bottom: 2rem !important;
+        box-sizing: border-box !important;
+    }
+    
+    .info-column {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
 }
 
 /* Theme Toggle Button Style */
