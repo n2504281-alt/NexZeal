@@ -2819,4 +2819,51 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     }
 }
 
+/* ==========================================================================
+   SCROLL TO TOP BUTTON
+   ========================================================================== */
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 46px;
+    height: 46px;
+    border-radius: var(--radius-circle);
+    background-color: #081527;
+    border: 2px solid #00c4b3;
+    color: #00c4b3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 196, 179, 0.2);
+}
+
+.scroll-to-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-to-top-btn:hover {
+    background-color: #00c4b3;
+    color: #081527;
+    box-shadow: 0 8px 25px rgba(0, 196, 179, 0.4);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 580px) {
+    .scroll-to-top-btn {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 40px;
+        height: 40px;
+    }
+}
+
 

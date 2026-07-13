@@ -457,4 +457,34 @@ document.addEventListener('DOMContentLoaded', () => {
         // Initial setup
         setTimeout(updateWorkControls, 300);
     }
+
+    // 7. Dynamic Scroll-to-Top Button
+    const createScrollToTopButton = () => {
+        const btn = document.createElement('button');
+        btn.id = 'scroll-to-top';
+        btn.className = 'scroll-to-top-btn';
+        btn.setAttribute('aria-label', 'Scroll to Top');
+        btn.innerHTML = `
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+        `;
+        document.body.appendChild(btn);
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                btn.classList.add('visible');
+            } else {
+                btn.classList.remove('visible');
+            }
+        });
+
+        btn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    };
+    createScrollToTopButton();
 });
