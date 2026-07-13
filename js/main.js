@@ -85,22 +85,26 @@ document.addEventListener('DOMContentLoaded', () => {
         'NA': {
             name: 'Naimat',
             role: 'Founder & Web Developer',
-            bio: 'Naimat launched NexZeal in 2020 with a mission to deliver clean code architectures directly to businesses. He oversees web frameworks and systems engineering, ensuring every site is fast, robust, and search-optimized.'
+            bio: 'Naimat launched NexZeal in 2020 with a mission to deliver clean code architectures directly to businesses. He oversees web frameworks and systems engineering, ensuring every site is fast, robust, and search-optimized.',
+            img: 'img/avatar_naimat.jpg'
         },
         'SO': {
             name: 'Sohail',
             role: 'App Developer',
-            bio: 'Sohail is our mobile app engineer. He translates complex requirements into sleek, native mobile flows, working direct-to-client on iOS, Android, and cross-platform architecture.'
+            bio: 'Sohail is our mobile app engineer. He translates complex requirements into sleek, native mobile flows, working direct-to-client on iOS, Android, and cross-platform architecture.',
+            img: 'img/avatar_sohail.jpg'
         },
         'HA': {
             name: 'Haseeb',
             role: 'UI/UX Designer',
-            bio: 'Haseeb shapes how users interact with our software. He creates geometric, accessible wireframes and design systems configured strictly around high conversion and plain-spoken ease of use.'
+            bio: 'Haseeb shapes how users interact with our software. He creates geometric, accessible wireframes and design systems configured strictly around high conversion and plain-spoken ease of use.',
+            img: 'img/avatar_haseeb.jpg'
         },
         'HM': {
             name: 'Hamza',
             role: 'SEO & Growth',
-            bio: 'Hamza bakes discoverability into every digital project from day one. He configures lightweight metadata, sets search indexing benchmarks, and ensures sub-second speed profiles that keep bounce rates near zero.'
+            bio: 'Hamza bakes discoverability into every digital project from day one. He configures lightweight metadata, sets search indexing benchmarks, and ensures sub-second speed profiles that keep bounce rates near zero.',
+            img: 'img/avatar_hamza.jpg'
         }
     };
 
@@ -112,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 teamNodes.forEach(n => n.classList.remove('active'));
                 node.classList.add('active');
 
-                const key = circle.textContent.trim();
+                const key = node.getAttribute('data-member');
                 const member = teamData[key];
 
                 if (member) {
@@ -120,7 +124,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     card.style.opacity = '0.3';
                     
                     setTimeout(() => {
-                        detailAvatar.textContent = key;
+                        const avatarImg = detailAvatar.querySelector('img');
+                        if (avatarImg) {
+                            avatarImg.src = member.img;
+                            avatarImg.alt = member.name;
+                        }
                         detailName.textContent = member.name;
                         detailRole.textContent = member.role;
                         detailBio.textContent = member.bio;
