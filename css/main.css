@@ -1871,7 +1871,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     letter-spacing: 0.05em;
 }
 
-/* The Four of Us Badge Interface */
+/* The Five of Us Badge Interface */
 .team-container {
     margin-top: 4.5rem;
 }
@@ -2479,10 +2479,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
         overflow-x: auto !important;
         scroll-snap-type: x mandatory !important;
         gap: 1.25rem !important;
-        padding: 0.5rem 0.25rem 1.5rem 0.25rem !important;
-        margin: 0 -1.25rem 2rem -1.25rem !important;
-        padding-left: 1.25rem !important;
-        padding-right: 1.25rem !important;
+        padding: 0.5rem 0 1.5rem 0 !important;
+        margin: 0 0 2rem 0 !important;
         scrollbar-width: none;
         -webkit-overflow-scrolling: touch !important;
     }
