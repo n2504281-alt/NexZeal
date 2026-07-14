@@ -706,9 +706,9 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeroParticles();
 
     // 3D Title Interactive Mouse Tilt Effect
-    const innerTitles = document.querySelectorAll('.inner-page-title');
-    innerTitles.forEach(title => {
-        const header = title.closest('.inner-header');
+    const titlesToTilt = document.querySelectorAll('.inner-page-title, .hero-title');
+    titlesToTilt.forEach(title => {
+        const header = title.closest('.inner-header, .hero-section');
         if (!header) return;
 
         header.addEventListener('mousemove', (e) => {
