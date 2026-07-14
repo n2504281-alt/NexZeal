@@ -1409,7 +1409,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: rgba(8, 21, 39, 0.2);
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -1422,7 +1422,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .dark-theme .slider-dot {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .dark-theme .slider-dot.active {
@@ -1462,8 +1462,27 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
         flex-shrink: 0;
     }
     .slider-controls {
-        margin-top: 2.5rem;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
         gap: 1.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 2.5rem;
+    }
+    .slider-dots {
+        display: flex;
+        gap: 0.6rem;
+        align-items: center;
+    }
+    .slider-dot {
+        width: 8px;
+        height: 8px;
+    }
+    .slider-dot.active {
+        width: 20px;
+        border-radius: 4px;
+        background-color: #00c4b3;
+        box-shadow: 0 0 8px rgba(0, 196, 179, 0.4);
     }
 }
 
@@ -2473,7 +2492,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     }
     
     .featured-work-grid .featured-work-card {
-        flex: 0 0 82% !important;
+        flex: 0 0 100% !important;
         scroll-snap-align: start !important;
         margin: 0 !important;
     }

@@ -115,27 +115,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const teamData = {
         'NA': {
             name: 'Naimat',
-            role: 'Founder & Web Developer',
-            bio: 'Naimat launched NexZeal in 2020 with a mission to deliver clean code architectures directly to businesses. He oversees web frameworks and systems engineering, ensuring every site is fast, robust, and search-optimized.',
+            role: 'Digital Marketing Specialist',
+            bio: 'Experienced Digital Marketing Specialist with expertise in SEO Optimization, Performance Marketing, Search Engine Marketing, AI & Automation, Social Media Management, Content Creation, Brand Identity, and Business Promotions. Dedicated to helping businesses increase their online presence, generate quality leads, and achieve measurable growth.',
             img: 'img/avatar_naimat.jpg'
         },
         'SO': {
             name: 'Sohail',
             role: 'App Developer',
-            bio: 'Sohail is our mobile app engineer. He translates complex requirements into sleek, native mobile flows, working direct-to-client on iOS, Android, and cross-platform architecture.',
+            bio: 'Experienced App Developer with expertise in Android and iOS application development. Skilled in creating scalable, feature-rich, and user-friendly mobile applications with smooth performance.',
             img: 'img/avatar_sohail.jpg'
         },
         'HA': {
             name: 'Haseeb',
-            role: 'UI/UX Designer',
-            bio: 'Haseeb shapes how users interact with our software. He creates geometric, accessible wireframes and design systems configured strictly around high conversion and plain-spoken ease of use.',
+            role: 'Website Designer',
+            bio: 'Creative Website Designer specializing in UI/UX design, responsive layouts, wireframing, and modern web interfaces. Focused on delivering visually appealing designs that enhance user experience and strengthen brand identity.',
             img: 'img/avatar_haseeb.jpg'
         },
         'HM': {
             name: 'Hamza',
-            role: 'SEO & Growth',
-            bio: 'Hamza bakes discoverability into every digital project from day one. He configures lightweight metadata, sets search indexing benchmarks, and ensures sub-second speed profiles that keep bounce rates near zero.',
+            role: 'Website Developer',
+            bio: 'Experienced Website Developer specializing in responsive websites, custom web solutions, and website optimization. Passionate about building secure, high-performance, and user-friendly websites for businesses.',
             img: 'img/avatar_hamza.jpg'
+        },
+        'IR': {
+            name: 'Irfan',
+            role: 'Website Management & Support Specialist',
+            bio: 'Experienced Website Management & Support Specialist skilled in website maintenance, security monitoring, performance optimization, backups, troubleshooting, and technical support. Committed to keeping websites secure, updated, and running efficiently at all times.',
+            img: 'img/avatar_irfan.jpg'
         }
     };
 
