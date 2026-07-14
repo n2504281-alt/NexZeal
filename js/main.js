@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let currentIndex = 0;
         
         const getVisibleCardsCount = () => {
-            if (window.innerWidth <= 580) return 2;
+            if (window.innerWidth <= 580) return 1;
             if (window.innerWidth <= 1024) return 2;
             return 3;
         };
@@ -498,6 +498,56 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     createScrollToTopButton();
 
+    // 7.5. Dynamic Read More / Read Less for Services Page (Mobile View Only)
+    const initServicesCollapse = () => {
+        const servicePageGrid = document.querySelector('.services-page-grid');
+        if (!servicePageGrid) return;
+        
+        const pageCards = servicePageGrid.querySelectorAll('.service-page-card');
+        pageCards.forEach(card => {
+            const descPara = card.querySelector('.service-page-content p');
+            const pageList = card.querySelector('.service-page-list');
+            
+            if (descPara) {
+                const text = descPara.textContent.trim();
+                const firstDotIndex = text.indexOf('. ');
+                
+                if (firstDotIndex !== -1) {
+                    const firstSentence = text.substring(0, firstDotIndex + 1);
+                    const remainingText = text.substring(firstDotIndex + 1);
+                    descPara.innerHTML = `${firstSentence} <span class="mobile-hidden-text">${remainingText}</span>`;
+                }
+                
+                if (pageList) {
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'mobile-hidden-details';
+                    pageList.parentNode.insertBefore(wrapper, pageList);
+                    wrapper.appendChild(pageList);
+                }
+                
+                card.classList.add('mobile-collapsed');
+                
+                const btn = document.createElement('button');
+                btn.className = 'read-more-btn';
+                btn.setAttribute('aria-expanded', 'false');
+                btn.innerHTML = 'Read More <svg viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 2px; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+                
+                descPara.parentNode.insertBefore(btn, descPara.nextSibling);
+                
+                btn.addEventListener('click', () => {
+                    const isCollapsed = card.classList.toggle('mobile-collapsed');
+                    btn.setAttribute('aria-expanded', !isCollapsed);
+                    if (isCollapsed) {
+                        btn.innerHTML = 'Read More <svg viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 2px; transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+                    } else {
+                        btn.innerHTML = 'Read Less <svg viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 2px; transform: rotate(180deg); transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+                    }
+                });
+            }
+        });
+    };
+    initServicesCollapse();
+
     // 8. Preloader Fade-out
     const hidePreloader = () => {
         const preloader = document.getElementById('preloader');
@@ -541,6 +591,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (prefersReduced) {
             ratingNumEl.textContent = "4.9";
         } else {
+            const isMobile = window.innerWidth <= 768;
             const ratingObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -548,7 +599,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         ratingObserver.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.2 });
+            }, { threshold: isMobile ? 0.01 : 0.1 });
 
             ratingObserver.observe(ratingNumEl);
         }
