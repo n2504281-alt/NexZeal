@@ -633,7 +633,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 this.size = Math.random() * 2 + 1;
                 this.speedX = (Math.random() - 0.5) * 0.4;
                 this.speedY = (Math.random() - 0.5) * 0.4;
-                this.opacity = Math.random() * 0.5 + 0.2;
+                this.opacity = Math.random() * 0.2 + 0.08;
             }
 
             update() {
@@ -670,7 +670,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Draw connecting lines
             const isDark = document.documentElement.classList.contains('dark-theme') || !document.documentElement.classList.contains('light-theme');
-            const lineColor = isDark ? 'rgba(0, 196, 179, 0.07)' : 'rgba(8, 21, 39, 0.05)';
+            const lineColor = isDark ? 'rgba(0, 196, 179, 0.04)' : 'rgba(8, 21, 39, 0.02)';
             ctx.strokeStyle = lineColor;
             ctx.lineWidth = 0.5;
 

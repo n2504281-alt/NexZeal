@@ -308,7 +308,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    NAVIGATION BAR
    ========================================================================== */
 .navbar {
-    height: 80px;
+    height: 68px;
     background-color: var(--color-paper);
     border-bottom: 1px solid var(--border-color);
     position: sticky;
@@ -468,18 +468,20 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    HERO SECTION
    ========================================================================== */
 .hero-section {
-    padding: 3rem 0 6rem 0;
+    padding: 2.5rem 0 4.5rem 0;
     position: relative;
     overflow: hidden;
-    background-image: linear-gradient(rgba(4, 10, 21, 0.82), rgba(4, 10, 21, 0.94)), url('../img/hero_background.png');
+    background-image: linear-gradient(rgba(4, 10, 21, 0.88), rgba(4, 10, 21, 0.96)), url('../img/hero_background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     transition: background 0.3s ease;
+    border-bottom: 1px solid rgba(0, 196, 179, 0.15);
 }
 
 .light-theme .hero-section {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.88), rgba(244, 246, 249, 0.94)), url('../img/hero_background.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(244, 246, 249, 0.96)), url('../img/hero_background.png');
+    border-bottom: 1px solid rgba(11, 30, 61, 0.08);
 }
 
 .hero-particles-canvas {
@@ -553,9 +555,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .hero-subtext {
     font-size: 1.2rem;
-    color: var(--color-slate);
+    color: #475569; /* high contrast Slate-600 for light theme */
     margin-bottom: 2.5rem;
     max-width: 580px;
+}
+
+.dark-theme .hero-subtext {
+    color: #cbd5e1; /* high contrast Slate-300 for dark theme */
 }
 
 .hero-actions {
@@ -1430,23 +1436,23 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .slider-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: rgba(8, 21, 39, 0.2);
+    width: 24px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: rgba(8, 21, 39, 0.25);
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .slider-dot.active {
-    width: 28px;
-    border-radius: 5px;
+    width: 40px;
+    border-radius: 2px;
     background-color: var(--color-teal-bright);
     box-shadow: 0 0 10px rgba(0, 229, 208, 0.5);
 }
 
 .dark-theme .slider-dot {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 .dark-theme .slider-dot.active {
@@ -1499,12 +1505,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
         align-items: center;
     }
     .slider-dot {
-        width: 8px;
-        height: 8px;
+        width: 16px;
+        height: 3px;
+        border-radius: 2px;
     }
     .slider-dot.active {
-        width: 20px;
-        border-radius: 4px;
+        width: 28px;
+        border-radius: 2px;
         background-color: #00c4b3;
         box-shadow: 0 0 8px rgba(0, 196, 179, 0.4);
     }
@@ -2535,17 +2542,17 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     }
     
     .work-dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.2);
+        width: 16px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: rgba(255, 255, 255, 0.25);
         cursor: pointer;
         transition: all 0.3s ease;
     }
     
     .work-dot.active {
-        width: 20px;
-        border-radius: 4px;
+        width: 28px;
+        border-radius: 2px;
         background-color: #00c4b3;
         box-shadow: 0 0 8px rgba(0, 196, 179, 0.4);
     }
