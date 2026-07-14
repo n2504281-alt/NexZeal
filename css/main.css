@@ -2709,6 +2709,22 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* Cards default styling is used for all service-page-cards */
 
+/* Combined/13th Card balance alignment spanning 2 columns on desktop */
+.service-page-card.full-width-card {
+    grid-column: span 2;
+    flex-direction: row;
+}
+
+.service-page-card.full-width-card .service-page-image-box {
+    width: 50%;
+    height: auto;
+}
+
+.service-page-card.full-width-card .service-page-content {
+    width: 50%;
+    padding: 3rem 2.5rem;
+}
+
 /* Dark mode overrides for cards */
 .dark-theme .service-page-card {
     background: #081527;
@@ -2721,7 +2737,25 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
         gap: 1.75rem;
     }
     
+    .service-page-card.full-width-card {
+        flex-direction: column;
+    }
+    
+    .service-page-card.full-width-card .service-page-image-box {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .service-page-card.full-width-card .service-page-content {
+        width: 100%;
+        padding: 2.5rem 2rem;
+    }
+}
 
+@media (max-width: 768px) {
+    .service-page-card.full-width-card {
+        grid-column: span 2;
+    }
 }
 
 
@@ -2780,7 +2814,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
         justify-content: center;
     }
     
-
+    .service-page-card.full-width-card .service-page-image-box {
+        height: 140px;
+    }
+    
+    .service-page-card.full-width-card .service-page-content {
+        padding: 1.25rem 1rem;
+    }
 }
 
 /* ==========================================================================
