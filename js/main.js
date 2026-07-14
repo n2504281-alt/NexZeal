@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Dynamic Stagger Setup for grids
-        const staggerContainers = document.querySelectorAll('.feature-grid, .reviews-grid, .services-grid, .process-grid, .featured-work-grid, .why-choose-grid, .trusted-logos, .work-grid');
+        const staggerContainers = document.querySelectorAll('.feature-grid, .reviews-list, .services-grid, .process-grid, .featured-work-grid, .why-choose-grid, .trusted-logos-grid, .work-grid');
         staggerContainers.forEach(container => {
             const children = container.querySelectorAll('.reveal');
             children.forEach((child, index) => {
@@ -508,6 +508,51 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 600);
         }
     };
+
+    // 9. Scroll-Triggered Rating Count-Up Animation
+    const ratingNumEl = document.getElementById('rating-number');
+    if (ratingNumEl) {
+        const animateRating = () => {
+            let start = 1.0;
+            const end = 4.9;
+            const duration = 1600; // 1.6 seconds for smooth animation
+            const startTime = performance.now();
+
+            const updateRating = (currentTime) => {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                // Ease out cubic for a more natural slowdown at the end
+                const easeOutCubic = 1 - Math.pow(1 - progress, 3);
+                const currentVal = start + (end - start) * easeOutCubic;
+                
+                ratingNumEl.textContent = currentVal.toFixed(1);
+
+                if (progress < 1) {
+                    requestAnimationFrame(updateRating);
+                } else {
+                    ratingNumEl.textContent = end.toFixed(1);
+                }
+            };
+
+            requestAnimationFrame(updateRating);
+        };
+
+        if (prefersReduced) {
+            ratingNumEl.textContent = "4.9";
+        } else {
+            const ratingObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateRating();
+                        ratingObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            ratingObserver.observe(ratingNumEl);
+        }
+    }
 
     // Hide preloader when window fully loads
     window.addEventListener('load', hidePreloader);

@@ -262,26 +262,18 @@
         </div>
     </div>
 
-    <!-- ==========================================================================
-       TRUSTED BY BRAND STRIP
-       ========================================================================== -->
-    <section class="trusted-strip">
-        <div class="container">
-            <h2 class="trusted-title">TRUSTED BY LAUNCH TEAMS & STARTUPS</h2>
-            <div class="trusted-logos">
-                <div class="trusted-card reveal">VENTURELABS</div>
-                <div class="trusted-card reveal">OMNICARE</div>
-                <div class="trusted-card reveal">HYPERSCALE</div>
-                <div class="trusted-card reveal">GROWTHHUB</div>
-            </div>
-        </div>
-    </section>
 
     <!-- ==========================================================================
        C. FEATURE STRIP
        ========================================================================== -->
     <section class="feature-strip">
         <div class="container">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">STUDIO DNA</span>
+                <h2 class="section-title">Built Different. Shipped Faster.</h2>
+                <p class="section-subtext">No account managers, no bloated templates. Just four engineers building high-performance systems designed to rank and scale.</p>
+            </div>
+            
             <div class="feature-grid">
                 <!-- Card 1 -->
                 <div class="feature-card reveal">
@@ -606,47 +598,87 @@
     </section>
 
     <!-- ==========================================================================
-       CLIENT REVIEWS SECTION (PLACED RIGHT AFTER SERVICES PER USER REQUEST)
+       CLIENT REVIEWS SECTION (RESTRUCTURED TO INCLUDE RATINGS & LOGOS)
        ========================================================================== -->
     <section class="section-padding reviews-section">
         <div class="container">
-            <div class="section-header reveal">
-                <span class="section-eyebrow">TESTIMONIALS</span>
-                <h2 class="section-title">What Our Clients Say</h2>
-                <p class="section-subtext">Read how we help startups, SMBs, and product creators ship high-quality custom systems.</p>
-            </div>
-            
-            <div class="reviews-grid">
-                <!-- Card 1 -->
-                <div class="review-card reveal">
-                    <p class="review-quote">"Working directly with Naimat and Sohail saved us months of feedback loops. They got our app scaled and shipped with zero middleman overhead."</p>
-                    <div class="review-author">
-                        <div class="review-avatar"><img src="img/avatar_thomas.jpg" alt="Thomas Logan"></div>
-                        <div class="author-meta">
-                            <h4>Thomas Logan</h4>
-                            <p>Founder, VentureLabs</p>
+            <div class="reviews-layout">
+                <!-- Left Side: Summary Column -->
+                <div class="reviews-summary-col">
+                    <!-- Rating Summary Card -->
+                    <div class="rating-summary-card reveal">
+                        <div class="rating-number-container">
+                            <span class="rating-number" id="rating-number">1.0</span><span class="rating-plus">+</span>
+                        </div>
+                        <div class="rating-stars">
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                        </div>
+                        <div class="rating-count">( 40+ Reviews )</div>
+                        <h3 class="rating-summary-text">Customer experiences that speak for themselves</h3>
+                        <div class="rating-avatars">
+                            <img src="img/avatar_thomas.jpg" alt="Client Thomas" class="avatar-overlapping">
+                            <img src="img/avatar_sarah.jpg" alt="Client Sarah" class="avatar-overlapping">
+                            <img src="img/avatar_david.jpg" alt="Client David" class="avatar-overlapping">
+                        </div>
+                    </div>
+
+                    <!-- Trusted Logos Box (Moved Down) -->
+                    <div class="trusted-logos-box reveal">
+                        <h3 class="trusted-logos-title">TRUSTED BY LAUNCH TEAMS & STARTUPS</h3>
+                        <div class="trusted-logos-grid">
+                            <div class="trusted-card">VENTURELABS</div>
+                            <div class="trusted-card">OMNICARE</div>
+                            <div class="trusted-card">HYPERSCALE</div>
+                            <div class="trusted-card">GROWTHHUB</div>
                         </div>
                     </div>
                 </div>
-                <!-- Card 2 -->
-                <div class="review-card reveal">
-                    <p class="review-quote">"NexZeal rebuilt our marketing website. Our load speeds dropped under a second, and our inbound search leads increased by 40% in two months."</p>
-                    <div class="review-author">
-                        <div class="review-avatar"><img src="img/avatar_sarah.jpg" alt="Sarah Miller"></div>
-                        <div class="author-meta">
-                            <h4>Sarah Miller</h4>
-                            <p>Operations Director, OmniCare</p>
-                        </div>
+
+                <!-- Right Side: Testimonials Column -->
+                <div class="reviews-content-col">
+                    <div class="section-header-left reveal">
+                        <span class="section-eyebrow">TESTIMONIALS</span>
+                        <h2 class="section-title">What Our Clients Say</h2>
+                        <p class="section-subtext">Read how we help startups, SMBs, and product creators ship high-quality custom systems.</p>
                     </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="review-card reveal">
-                    <p class="review-quote">"They don't throw marketing jargon at you. They just write solid code, show up to weekly builder reviews, and deliver exactly what they promise."</p>
-                    <div class="review-author">
-                        <div class="review-avatar"><img src="img/avatar_david.jpg" alt="David Kross"></div>
-                        <div class="author-meta">
-                            <h4>David Kross</h4>
-                            <p>CTO, HyperScale SaaS</p>
+
+                    <div class="reviews-list">
+                        <!-- Card 1 -->
+                        <div class="review-card reveal">
+                            <p class="review-quote">"Working directly with Naimat and Sohail saved us months of feedback loops. They got our app scaled and shipped with zero middleman overhead."</p>
+                            <div class="review-author">
+                                <div class="review-avatar"><img src="img/avatar_thomas.jpg" alt="Thomas Logan"></div>
+                                <div class="author-meta">
+                                    <h4>Thomas Logan</h4>
+                                    <p>Founder, VentureLabs</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="review-card reveal">
+                            <p class="review-quote">"NexZeal rebuilt our marketing website. Our load speeds dropped under a second, and our inbound search leads increased by 40% in two months."</p>
+                            <div class="review-author">
+                                <div class="review-avatar"><img src="img/avatar_sarah.jpg" alt="Sarah Miller"></div>
+                                <div class="author-meta">
+                                    <h4>Sarah Miller</h4>
+                                    <p>Operations Director, OmniCare</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="review-card reveal">
+                            <p class="review-quote">"They don't throw marketing jargon at you. They just write solid code, show up to weekly builder reviews, and deliver exactly what they promise."</p>
+                            <div class="review-author">
+                                <div class="review-avatar"><img src="img/avatar_david.jpg" alt="David Kross"></div>
+                                <div class="author-meta">
+                                    <h4>David Kross</h4>
+                                    <p>CTO, HyperScale SaaS</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
