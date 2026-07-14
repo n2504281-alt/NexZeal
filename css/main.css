@@ -3267,4 +3267,134 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     }
 }
 
+/* ==========================================================================
+   INNER PAGES - 3D TYPOGRAPHY AND ANIMATIONS
+   ========================================================================== */
+.inner-header {
+    background-color: var(--color-white) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    padding: 6.5rem 0 !important;
+    position: relative;
+    overflow: visible !important; /* critical for 3D shadows */
+    z-index: 1;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+/* Subtle background grid pattern to enhance 3D depth */
+.inner-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(11, 30, 61, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(11, 30, 61, 0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: center center;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.dark-theme .inner-header::before {
+    background-image: 
+        linear-gradient(rgba(0, 196, 179, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 196, 179, 0.04) 1px, transparent 1px);
+    opacity: 1;
+}
+
+/* Accent radial light glow behind the 3D title */
+.inner-header::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(0, 196, 179, 0.06) 0%, rgba(21, 79, 147, 0.02) 50%, transparent 100%);
+    pointer-events: none;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.dark-theme .inner-header::after {
+    background: radial-gradient(circle, rgba(0, 196, 179, 0.12) 0%, rgba(21, 79, 147, 0.04) 60%, transparent 100%);
+}
+
+.inner-page-title {
+    font-size: 3.5rem !important; /* Elevated size */
+    font-weight: 800;
+    line-height: 1.15;
+    max-width: 800px;
+    margin: 0 auto 1.5rem !important;
+    display: inline-block;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(30px) rotateX(8deg);
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), text-shadow 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: default;
+    
+    /* 3D volumetric light mode shadow stack */
+    text-shadow: 
+        0 1px 0 #e2e8f0,
+        0 2px 0 #cbd5e1,
+        0 3px 0 #94a3b8,
+        0 4px 0 #64748b,
+        0 5px 0 #475569,
+        0 6px 1px rgba(11, 30, 61, 0.1),
+        0 0 5px rgba(11, 30, 61, 0.05),
+        0 1px 3px rgba(11, 30, 61, 0.15),
+        0 3px 5px rgba(11, 30, 61, 0.12),
+        0 6px 10px rgba(11, 30, 61, 0.12),
+        0 12px 20px rgba(11, 30, 61, 0.12);
+}
+
+.dark-theme .inner-page-title {
+    color: #ffffff;
+    /* 3D volumetric dark mode shadow stack with a subtle teal/blue glow */
+    text-shadow: 
+        0 1px 0 rgba(0, 196, 179, 0.35),
+        0 2px 0 rgba(0, 196, 179, 0.3),
+        0 3px 0 rgba(0, 196, 179, 0.25),
+        0 4px 0 rgba(21, 79, 147, 0.35),
+        0 5px 0 rgba(21, 79, 147, 0.35),
+        0 6px 0 rgba(21, 79, 147, 0.25),
+        0 7px 1px rgba(0, 0, 0, 0.4),
+        0 0 10px rgba(0, 196, 179, 0.15),
+        0 1px 4px rgba(0, 0, 0, 0.5),
+        0 4px 8px rgba(0, 0, 0, 0.4),
+        0 8px 16px rgba(0, 0, 0, 0.4),
+        0 16px 25px rgba(0, 196, 179, 0.2);
+}
+
+/* Fluid mouse tracking responsiveness */
+.inner-header:hover .inner-page-title {
+    transition: transform 0.15s cubic-bezier(0.25, 0.8, 0.25, 1), text-shadow 0.15s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Beautiful responsive scaling for title size */
+@media (max-width: 768px) {
+    .inner-page-title {
+        font-size: 2.5rem !important;
+    }
+}
+
+/* Custom reveal state overrides specifically for inner page titles to enter from 3D space */
+.inner-page-title.reveal {
+    opacity: 0 !important;
+    transform: translateZ(-200px) rotateX(-60deg) rotateY(10deg) !important;
+    filter: blur(8px) !important;
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), filter 0.9s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.inner-page-title.reveal.revealed {
+    opacity: 1 !important;
+    transform: translateZ(30px) rotateX(8deg) rotateY(0deg) !important;
+    filter: blur(0) !important;
+}
+
 

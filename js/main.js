@@ -705,6 +705,63 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initHeroParticles();
 
+    // 3D Title Interactive Mouse Tilt Effect
+    const innerTitles = document.querySelectorAll('.inner-page-title');
+    innerTitles.forEach(title => {
+        const header = title.closest('.inner-header');
+        if (!header) return;
+
+        header.addEventListener('mousemove', (e) => {
+            if (prefersReduced) return;
+            const rect = header.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+
+            // Maximum rotation angle in degrees
+            const maxRotation = 12;
+            const rotateX = -(y / (rect.height / 2)) * maxRotation;
+            const rotateY = (x / (rect.width / 2)) * maxRotation;
+
+            title.style.transform = `translateZ(50px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            
+            // Slightly shift shadows based on mouse position to enhance 3D effect
+            const shadowX = -(x / (rect.width / 2)) * 8;
+            const shadowY = -(y / (rect.height / 2)) * 8;
+            
+            if (document.documentElement.classList.contains('dark-theme')) {
+                title.style.textShadow = `
+                    ${shadowX * 0.1}px ${shadowY * 0.1 + 1}px 0 rgba(0, 196, 179, 0.35),
+                    ${shadowX * 0.2}px ${shadowY * 0.2 + 2}px 0 rgba(0, 196, 179, 0.3),
+                    ${shadowX * 0.3}px ${shadowY * 0.3 + 3}px 0 rgba(0, 196, 179, 0.25),
+                    ${shadowX * 0.4}px ${shadowY * 0.4 + 4}px 0 rgba(21, 79, 147, 0.4),
+                    ${shadowX * 0.5}px ${shadowY * 0.5 + 5}px 0 rgba(21, 79, 147, 0.3),
+                    ${shadowX * 0.6}px ${shadowY * 0.6 + 6}px 0 rgba(21, 79, 147, 0.25),
+                    ${shadowX * 0.8}px ${shadowY * 0.8 + 8}px 1px rgba(0, 0, 0, 0.4),
+                    0 0 10px rgba(0, 196, 179, 0.15),
+                    ${shadowX}px ${shadowY + 12}px 15px rgba(0, 0, 0, 0.5),
+                    ${shadowX * 1.5}px ${shadowY + 20}px 30px rgba(0, 196, 179, 0.25)
+                `;
+            } else {
+                title.style.textShadow = `
+                    ${shadowX * 0.1}px ${shadowY * 0.1 + 1}px 0 #e2e8f0,
+                    ${shadowX * 0.2}px ${shadowY * 0.2 + 2}px 0 #cbd5e1,
+                    ${shadowX * 0.3}px ${shadowY * 0.3 + 3}px 0 #94a3b8,
+                    ${shadowX * 0.4}px ${shadowY * 0.4 + 4}px 0 #64748b,
+                    ${shadowX * 0.5}px ${shadowY * 0.5 + 5}px 0 #475569,
+                    ${shadowX * 0.6}px ${shadowY * 0.6 + 6}px 1px rgba(11, 30, 61, 0.1),
+                    0 0 5px rgba(11, 30, 61, 0.05),
+                    ${shadowX}px ${shadowY + 10}px 12px rgba(11, 30, 61, 0.15),
+                    ${shadowX * 1.5}px ${shadowY + 18}px 25px rgba(11, 30, 61, 0.2)
+                `;
+            }
+        });
+
+        header.addEventListener('mouseleave', () => {
+            title.style.transform = '';
+            title.style.textShadow = '';
+        });
+    });
+
     // Hide preloader when window fully loads
     window.addEventListener('load', hidePreloader);
 
