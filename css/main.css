@@ -2707,21 +2707,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     margin-top: 3px;
 }
 
-/* 5th Card balance alignment spanning 2 columns on desktop */
-.service-page-card:nth-child(5) {
-    grid-column: span 2;
-    flex-direction: row;
-}
-
-.service-page-card:nth-child(5) .service-page-image-box {
-    width: 50%;
-    height: auto;
-}
-
-.service-page-card:nth-child(5) .service-page-content {
-    width: 50%;
-    padding: 3rem 2.5rem;
-}
+/* Cards default styling is used for all service-page-cards */
 
 /* Dark mode overrides for cards */
 .dark-theme .service-page-card {
@@ -2735,26 +2721,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
         gap: 1.75rem;
     }
     
-    .service-page-card:nth-child(5) {
-        flex-direction: column;
-    }
-    
-    .service-page-card:nth-child(5) .service-page-image-box {
-        width: 100%;
-        height: 200px;
-    }
-    
-    .service-page-card:nth-child(5) .service-page-content {
-        width: 100%;
-        padding: 2.5rem 2rem;
-    }
+
 }
 
-@media (max-width: 768px) {
-    .service-page-card:nth-child(5) {
-        grid-column: span 2;
-    }
-}
+
 
 @media (max-width: 580px) {
     .contact-card,
@@ -2810,13 +2780,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
         justify-content: center;
     }
     
-    .service-page-card:nth-child(5) .service-page-image-box {
-        height: 140px;
-    }
-    
-    .service-page-card:nth-child(5) .service-page-content {
-        padding: 1.25rem 1rem;
-    }
+
 }
 
 /* ==========================================================================

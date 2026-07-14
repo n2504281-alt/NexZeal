@@ -246,9 +246,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.service-card');
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
-    const dots = document.querySelectorAll('.slider-dot');
+    const dotsContainer = document.querySelector('.slider-dots');
 
-    if (track && cards.length > 0 && prevBtn && nextBtn) {
+    if (track && cards.length > 0 && prevBtn && nextBtn && dotsContainer) {
+        // Dynamically build slider dots
+        dotsContainer.innerHTML = '';
+        cards.forEach((_, idx) => {
+            const dot = document.createElement('span');
+            dot.className = `slider-dot${idx === 0 ? ' active' : ''}`;
+            dot.setAttribute('data-index', idx);
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.slider-dot');
         let currentIndex = 0;
         
         const getVisibleCardsCount = () => {
